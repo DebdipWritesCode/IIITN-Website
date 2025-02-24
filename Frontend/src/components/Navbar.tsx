@@ -7,10 +7,12 @@ import Desh from "../assets/Desh.jpg";
 import HindiSVG from "../assets/hindi.svg";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import SpecialSubNavbar from "./SpecialSubNavbar";
 
 const Navbar = () => {
   const headerImages = [EnglishSVG, HindiSVG];
   const [currentImage, setCurrentImage] = useState(0);
+  const [hoveredItem, setHoveredItem] = useState<number | null>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -42,18 +44,80 @@ const Navbar = () => {
           <FaSearch size={22} className="mr-3" />
         </div>
       </div>
-      <div className="flex items-center justify-between h-16 px-20 py-1 text-xl bg-white">
-        <div className="flex gap-8 items-center">
-          {subNavbar.map((item, index) =>
-            index < 3 ? <button key={item.id}>{item.name}</button> : null
-          )}
-          <img src={Desh} alt="Swachh Bharat" className="h-10" />
-        </div>
-        <div className="flex gap-10 items-center">
-          <img src={Azadi} alt="75 years of Independence" className="h-10" />
-          {subNavbar.map((item, index) =>
-            index >= 3 ? <button key={item.id}>{item.name}</button> : null
-          )}
+
+      <div className="relative">
+        <div className="flex items-center justify-between h-16 px-20 py-1 text-xl bg-white">
+          <div className="flex gap-8 items-center">
+            {subNavbar.map((item, index) =>
+              index < 3 ? (
+                <div
+                  key={item.id}
+                  className="relative"
+                  onMouseEnter={() => setHoveredItem(item.id)}
+                  // onMouseLeave={() => setHoveredItem(null)}
+                >
+                  <button className="hover:text-orange-600 cursor-pointer">
+                    {item.name}
+                  </button>
+
+                  {hoveredItem === item.id &&
+                    (item.name === "Academics" ? (
+                      <SpecialSubNavbar
+                        data={{ ...item, setHoveredItem }}
+                      />
+                    ) : (
+                      item.subLinks && (
+                        <div
+                          onMouseEnter={() => setHoveredItem(item.id)}
+                          onMouseLeave={() => setHoveredItem(null)}
+                          className="absolute top-full left-0 mt-2 bg-white shadow-md rounded-md p-3 w-48">
+                          {item.subLinks.map((sub) => (
+                            <Link
+                              key={sub.id}
+                              to={sub.url}
+                              className="block px-4 py-2 hover:bg-gray-100">
+                              {sub.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )
+                    ))}
+                </div>
+              ) : null
+            )}
+            <img src={Desh} alt="Swachh Bharat" className="h-10" />
+          </div>
+          <div className="flex gap-10 items-center">
+            <img src={Azadi} alt="75 years of Independence" className="h-10" />
+            {subNavbar.map((item, index) =>
+              index >= 3 ? (
+                <div
+                  key={item.id}
+                  className="relative"
+                  onMouseEnter={() => setHoveredItem(item.id)}>
+                  <button className="hover:text-orange-600 cursor-pointer">
+                    {item.name}
+                  </button>
+
+                  {hoveredItem === item.id && item.subLinks && (
+                    <div
+                      onMouseEnter={() => setHoveredItem(item.id)}
+                      onMouseLeave={() => setHoveredItem(null)}
+                      className="absolute top-full left-0 mt-2 bg-white shadow-md rounded-md p-3 w-48">
+                      {item.subLinks.map((sub) => (
+                        <Link
+                          key={sub.id}
+                          to={sub.url}
+                          className="block px-4 py-2 hover:bg-gray-100">
+                          {sub.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : null
+            )}
+          </div>
         </div>
       </div>
 
