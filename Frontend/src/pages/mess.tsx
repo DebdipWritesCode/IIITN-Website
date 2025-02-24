@@ -1,72 +1,100 @@
-import React from "react";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import React, { useState } from "react";
 
-// Sample Mess Images (Replace with real images)
-import mess1 from "../assets/mess/mess1.jpg";
-import mess2 from "../assets/mess/mess2.jpg";
-import mess3 from "../assets/mess/mess3.jpg";
-import nightCanteen1 from "../assets/mess/night1.jpg";
-import nightCanteen2 from "../assets/mess/night2.jpg";
-import nightCanteen3 from "../assets/mess/night3.jpg";
-import messMenuImg from "../assets/mess/mess_menu.jpg";
+// Keeping Original Logos as Requested
+import mess1 from "../assets/club_logos/elevate_logo.png";
+import mess2 from "../assets/club_logos/elevate_logo.png";
+import mess3 from "../assets/club_logos/elevate_logo.png";
+import nightCanteen1 from "../assets/club_logos/elevate_logo.png";
+import nightCanteen2 from "../assets/club_logos/elevate_logo.png";
+import nightCanteen3 from "../assets/club_logos/elevate_logo.png";
+import messMenuImg from "../assets/club_logos/elevate_logo.png";
 
 const StudentMess: React.FC = () => {
+  const messImages = [mess1, mess2, mess3];
+  const nightCanteenImages = [nightCanteen1, nightCanteen2, nightCanteen3];
+
+  const [messIndex, setMessIndex] = useState(0);
+  const [nightIndex, setNightIndex] = useState(0);
+
+  const nextMessImage = () => setMessIndex((prev) => (prev + 1) % messImages.length);
+  const prevMessImage = () => setMessIndex((prev) => (prev - 1 + messImages.length) % messImages.length);
+
+  const nextNightImage = () => setNightIndex((prev) => (prev + 1) % nightCanteenImages.length);
+  const prevNightImage = () => setNightIndex((prev) => (prev - 1 + nightCanteenImages.length) % nightCanteenImages.length);
+
   return (
-    <div className="min-h-screen bg-white text-gray-900 font-monsterrat">
+    <div className="min-h-screen bg-gray-50 text-gray-900 font-montserrat">
       {/* Header */}
-      <header className="bg-orange-600 text-white py-10 text-center shadow-md">
-        <h1 className="text-4xl font-bold">🍽️ Student Mess</h1>
-        <p className="mt-2 text-lg">Delicious & Nutritious Meals Served Daily!</p>
+      <header className="bg-gradient-to-r from-orange-600 to-orange-500 text-white py-10 text-center shadow-lg">
+        <h1 className="text-5xl font-bold">🍽️ Student Mess</h1>
+        <p className="mt-2 text-lg font-medium">Delicious & Nutritious Meals Served Daily!</p>
       </header>
 
       {/* Mess Details */}
-      <section className="max-w-6xl mx-auto px-6 py-12">
-        <h2 className="text-3xl font-bold text-orange-700 text-center">Mess Facilities</h2>
-        <p className="text-lg text-gray-700 mt-4 text-center">
-          The student mess provides **hygienic and tasty meals** with a **varied menu** ensuring nutritional balance.
-          Open for breakfast, lunch, and dinner. Enjoy **weekend specials** and **occasional festive meals**!
+      <section className="max-w-6xl mx-auto px-6 py-12 text-center">
+        <h2 className="text-4xl font-extrabold text-orange-700">Mess Facilities</h2>
+        <p className="text-lg text-gray-700 mt-4 leading-relaxed">
+          The student mess provides <strong>hygienic and tasty meals</strong> with a <strong>varied menu</strong> ensuring nutritional balance.  
+          Open for **breakfast, lunch, supper, and dinner**. Enjoy <strong>weekend specials</strong> and <strong>festive meals</strong>!
         </p>
       </section>
 
-      {/* Mess Photo Carousel */}
+      {/* Mess Image Gallery */}
       <section className="max-w-5xl mx-auto px-6 pb-12">
-        <h2 className="text-3xl font-bold text-orange-700 text-center">Mess Gallery</h2>
-        <Carousel autoPlay infiniteLoop showThumbs={false} showStatus={false} className="mt-6 shadow-lg rounded-xl overflow-hidden">
-          <div><img src={mess1} alt="Mess Hall" className="rounded-lg" /></div>
-          <div><img src={mess2} alt="Food Serving" className="rounded-lg" /></div>
-          <div><img src={mess3} alt="Dining Area" className="rounded-lg" /></div>
-        </Carousel>
+        <h2 className="text-4xl font-extrabold text-orange-700 text-center">Mess Gallery</h2>
+        <div className="relative flex justify-center items-center mt-6 group">
+          <button onClick={prevMessImage} className="absolute left-0 bg-gray-800 text-white px-4 py-3 rounded-full opacity-75 hover:opacity-100 transition">
+            ◀
+          </button>
+          <img 
+            src={messImages[messIndex]} 
+            alt="Mess Image" 
+            className="rounded-xl shadow-xl w-full max-w-lg transition-transform duration-500 hover:scale-105" 
+          />
+          <button onClick={nextMessImage} className="absolute right-0 bg-gray-800 text-white px-4 py-3 rounded-full opacity-75 hover:opacity-100 transition">
+            ▶
+          </button>
+        </div>
       </section>
 
-      {/* Mess Menu Image */}
+      {/* Mess Menu */}
       <section className="max-w-5xl mx-auto px-6 py-12">
-        <h2 className="text-3xl font-bold text-orange-700 text-center">Weekly Mess Menu</h2>
+        <h2 className="text-4xl font-extrabold text-orange-700 text-center">Weekly Mess Menu</h2>
         <div className="flex justify-center mt-6">
-          <img src={messMenuImg} alt="Mess Menu" className="shadow-lg rounded-lg w-full max-w-3xl" />
+          <img 
+            src={messMenuImg} 
+            alt="Mess Menu" 
+            className="shadow-xl rounded-lg w-full max-w-3xl transition duration-300 hover:scale-105"
+          />
         </div>
       </section>
 
       {/* Night Canteen */}
       <section className="max-w-6xl mx-auto px-6 py-12">
-        <h2 className="text-3xl font-bold text-orange-700 text-center">🌙 Night Canteen</h2>
-        <p className="text-lg text-gray-700 mt-4 text-center">
-          Open from **10 PM to 2 AM**, offering **snacks, beverages, and late-night meals** for students burning the midnight oil.
+        <h2 className="text-4xl font-extrabold text-orange-700 text-center">🌙 Night Canteen</h2>
+        <p className="text-lg text-gray-700 mt-4 text-center leading-relaxed">
+          Open from <strong>11 PM to 3 AM</strong>, offering <strong>snacks, beverages, and late-night meals</strong> for students burning the midnight oil.
         </p>
 
-        {/* Night Canteen Carousel */}
-        <div className="max-w-5xl mx-auto px-6 py-8">
-          <Carousel autoPlay infiniteLoop showThumbs={false} showStatus={false} className="mt-6 shadow-lg rounded-xl overflow-hidden">
-            <div><img src={nightCanteen1} alt="Night Canteen Area" className="rounded-lg" /></div>
-            <div><img src={nightCanteen2} alt="Students at Night Canteen" className="rounded-lg" /></div>
-            <div><img src={nightCanteen3} alt="Food at Night Canteen" className="rounded-lg" /></div>
-          </Carousel>
+        {/* Night Canteen Image Gallery */}
+        <div className="relative flex justify-center items-center mt-6 group">
+          <button onClick={prevNightImage} className="absolute left-0 bg-gray-800 text-white px-4 py-3 rounded-full opacity-75 hover:opacity-100 transition">
+            ◀
+          </button>
+          <img 
+            src={nightCanteenImages[nightIndex]} 
+            alt="Night Canteen Image" 
+            className="rounded-xl shadow-xl w-full max-w-lg transition-transform duration-500 hover:scale-105"
+          />
+          <button onClick={nextNightImage} className="absolute right-0 bg-gray-800 text-white px-4 py-3 rounded-full opacity-75 hover:opacity-100 transition">
+            ▶
+          </button>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="text-center py-6 bg-orange-600 text-white mt-10">
-        <p>© {new Date().getFullYear()} IIIT Nagpur | All Rights Reserved</p>
+      <footer className="text-center py-6 bg-gradient-to-r from-orange-600 to-orange-500 text-white mt-10 shadow-md">
+        <p className="text-lg font-medium">© {new Date().getFullYear()} IIIT Nagpur | All Rights Reserved</p>
       </footer>
     </div>
   );
