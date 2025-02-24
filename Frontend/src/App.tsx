@@ -29,7 +29,7 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => (
   <>
     <Navbar />
-    <div className="pt-20">{children}</div> {/* Ensure content is below fixed navbar */}
+    <div className="pt-20">{children}</div>
     <Footer />
   </>
 );
