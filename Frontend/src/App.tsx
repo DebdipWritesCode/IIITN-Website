@@ -63,7 +63,7 @@ const App: React.FC = () => {
           <Route path="/students/student-mess" element={<Layout><Mess /></Layout>} />
           <Route path="/students/hostel" element={<Layout><HostelRules /></Layout>} />
           <Route path="/students/scholarships" element={<Layout><Scholarships /></Layout>} />
-          <Route path="/students/clinical-counseling" element={<Layout><ClinicalCounseling /></Layout>} />
+          <Route path="/students/clinical-counselling" element={<Layout><ClinicalCounseling /></Layout>} />
           <Route path="/students/achievements" element={<Layout><AchievementsPage /></Layout>} />
           <Route path="/students/activities" element={<Layout><ActivitiesPage /></Layout>} />
           <Route path="/admissions/mtech" element={<Layout><Postgraduate /></Layout>} />
