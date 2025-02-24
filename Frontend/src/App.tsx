@@ -26,6 +26,7 @@ const ActivitiesPage = lazy(() => import("./pages/activities"));
 const Postgraduate = lazy(() => import("./pages/Postgraduate"));
 const Internships = lazy(() => import("./pages/internships"));
 const UGRules = lazy(() => import("./pages/UGRule"));
+const PGRule = lazy(() => import("./pages/PGRule"))
 const About_CSE = lazy(() => import("./pages/About_CSE"));
 const About_ECE = lazy(() => import("./pages/About_ECE"));
 const About_BS = lazy(() => import("./pages/About_BS"));
@@ -68,12 +69,14 @@ const App: React.FC = () => {
           <Route path="/admissions/mtech" element={<Layout><Postgraduate /></Layout>} />
           <Route path="/placements/internships" element={<Layout><Internships /></Layout>} />
           <Route path="/admissions/ug-rules" element={<Layout><UGRules /></Layout>} />
+          <Route path="/admissions/pg-rules" element={<Layout><PGRule /></Layout>} />
           <Route path="/cse/about" element={<Layout><About_CSE /></Layout>} />
           <Route path="/ece/about" element={<Layout><About_ECE /></Layout>} />
           <Route path="/basic-sciences/about" element={<Layout><About_BS /></Layout>} />
           <Route path="/alumni/login" element={<Layout><AlumniLogin /></Layout>} />
           <Route path="/alumni/members" element={<Layout><Members /></Layout>} />
           <Route path="/alumni/about-us" element={<Layout><AlumniAboutUs /></Layout>} />
+          
           <Route path="*" element={<NotFound />} /> {/* Handles all undefined routes */}
         </Routes>
       </Suspense>
