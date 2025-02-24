@@ -28,6 +28,7 @@ const Internships = lazy(() => import("./pages/internships"));
 const UGRules = lazy(() => import("./pages/UGRule"));
 const About_CSE = lazy(() => import("./pages/About_CSE"));
 const About_ECE = lazy(() => import("./pages/About_ECE"));
+const TnPCell = lazy(() => import("./pages/contact_t&p")); // Added Training & Placement page
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Layout wrapper for consistent UI
@@ -73,6 +74,7 @@ const App: React.FC = () => {
           <Route path="/alumni/login" element={<Layout><AlumniLogin /></Layout>} />
           <Route path="/alumni/members" element={<Layout><Members /></Layout>} />
           <Route path="/alumni/about-us" element={<Layout><AlumniAboutUs /></Layout>} />
+          <Route path="/placements/contact" element={<Layout><TnPCell /></Layout>} /> {/* Added Route for TnP Cell */}
         </Routes>
       </Suspense>
     </div>
