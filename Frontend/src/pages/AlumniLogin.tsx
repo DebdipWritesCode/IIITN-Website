@@ -12,10 +12,10 @@ const AlumniLogin = () => {
             </header>
 
             {/* Login Form */}
-            <section className="max-w-4xl mx-auto px-6 py-12">
-                <div className="bg-white shadow-lg rounded-xl p-8">
-                    <h2 className="text-3xl font-bold text-orange-700 text-center mb-6">Login</h2>
-                    <form className="space-y-6">
+            <section className="max-w-4xl mx-auto px-6 py-6">
+                <div className="bg-white shadow-lg rounded-xl p-6">
+                    <h2 className="text-3xl font-bold text-orange-700 text-center mb-4">Login</h2>
+                    <form className="space-y-4">
                         <div>
                             <label className="block text-lg font-medium text-gray-700">Email</label>
                             <input
