@@ -24,8 +24,10 @@ const AlumniAboutUs = lazy(() => import("./pages/AlumniAboutUs"));
 const AchievementsPage = lazy(() => import("./pages/acheivements"));
 const ActivitiesPage = lazy(() => import("./pages/activities"));
 const Postgraduate = lazy(() => import("./pages/Postgraduate"));
-const UGRule = lazy(() => import("./pages/UGRule"));
-const Internships = lazy(() => import("./pages/internships")); // Added Internships Route
+const Internships = lazy(() => import("./pages/internships"));
+const UGRules = lazy(() => import("./pages/UGRule"));
+const About_CSE = lazy(() => import("./pages/About_CSE"));
+const About_ECE = lazy(() => import("./pages/About_ECE"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Layout wrapper for consistent UI
@@ -63,8 +65,10 @@ const App: React.FC = () => {
           <Route path="/students/achievements" element={<Layout><AchievementsPage /></Layout>} />
           <Route path="/students/activities" element={<Layout><ActivitiesPage /></Layout>} />
           <Route path="/admissions/mtech" element={<Layout><Postgraduate /></Layout>} />
-          <Route path="/admissions/ug-rules" element={<Layout><UGRule /></Layout>} />
-          <Route path="/placements/internships" element={<Layout><Internships /></Layout>} /> {/* Added Internships Route */}
+          <Route path="/placements/internships" element={<Layout><Internships /></Layout>} />
+          <Route path="/admissions/ug-rules" element={<Layout><UGRules /></Layout>} />
+          <Route path="/cse/about" element={<Layout><About_CSE /></Layout>} />
+          <Route path="/ece/about" element={<Layout><About_ECE /></Layout>} />
           <Route path="/alumni/login" element={<Layout><AlumniLogin /></Layout>} />
           <Route path="/alumni/members" element={<Layout><Members /></Layout>} />
           <Route path="/alumni/about-us" element={<Layout><AlumniAboutUs /></Layout>} />
