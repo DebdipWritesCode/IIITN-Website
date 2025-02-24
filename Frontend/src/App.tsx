@@ -19,6 +19,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import AlumniLogin from "./pages/AlumniLogin";
 import Members from "./pages/Members";
+import AlumniAboutUs from "./pages/AlumniAboutUs";
 
 interface LayoutProps {
   children: ReactNode;
@@ -53,6 +54,7 @@ const App: React.FC = () => {
         <Route path="/students/clinical-counselling" element={<Layout><ClinicalCounseling /></Layout>} /> {/* New Route */}
         <Route path="/alumni/login" element={<Layout><AlumniLogin /></Layout>} />
         <Route path="/alumni/members" element={<Layout><Members /></Layout>} />
+        <Route path="/alumni/about-us" element={<Layout><AlumniAboutUs /></Layout>} />
       </Routes>
     </div>
   );
