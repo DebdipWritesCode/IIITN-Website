@@ -23,6 +23,8 @@ import AlumniAboutUs from "./pages/AlumniAboutUs";
 import AchievementsPage from "./pages/acheivements";
 import ActivitiesPage from "./pages/activities"; // Import ActivitiesPage
 import Postgraduate from "./pages/Postgraduate";
+import About_CSE from "./pages/About_CSE";
+import About_ECE from "./pages/About_ECE";
 
 interface LayoutProps {
   children: ReactNode;
@@ -61,6 +63,8 @@ const App: React.FC = () => {
         <Route path="/students/achievements" element={<Layout><AchievementsPage /></Layout>} />
         <Route path="/students/activities" element={<Layout><ActivitiesPage /></Layout>} /> {/* Added Activities Route */}
         <Route path="/admissions/mtech" element={<Layout><Postgraduate /></Layout>} />
+        <Route path="/cse/about" element={<Layout><About_CSE /></Layout>} />
+        <Route path="/ece/about" element={<Layout><About_ECE /></Layout>} />
       </Routes>
     </div>
   );
