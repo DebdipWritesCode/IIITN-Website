@@ -1,5 +1,3 @@
-import React from "react";
-
 const About_CSE = () => {
     return (
         <div className="bg-gray-100 pt-10">
