@@ -126,62 +126,67 @@ const Academics = () => {
         </div>
       </div>
 
-      <div className="">
-        <div className="">
-          <h3>Undergraduate Courses</h3>
-          <p>
-            IIIT Nagpur offers a Bachelor of Technology (B.Tech.) degree with
-            diverse specializations designed to equip students with
-            industry-relevant skills in emerging technologies. The institute
-            provides B.Tech. programs in Computer Science & Engineering (CSE)
-            and Electronics & Communication Engineering (ECE), with specialized
-            tracks in Artificial Intelligence & Machine Learning, Data Science &
-            Analytics, Human-Computer Interaction & Gaming Technology, and the
-            Internet of Things (IoT). The curriculum is structured to provide a
-            strong foundation in theoretical principles while integrating
-            hands-on learning through projects, industry collaborations, and
-            state-of-the-art laboratory work. Students are encouraged to engage
-            in research, innovation, and interdisciplinary projects, ensuring
-            they are well-prepared for careers in tech-driven industries,
-            research institutions, and academia. IIIT Nagpur fosters a culture
-            of experiential learning through internships, hackathons, and
-            startup incubation support, empowering students to become industry
-            leaders in the rapidly evolving technology landscape.
-          </p>
+      <div className="w-4/5 md:w-3/4 mx-auto my-12 mt-28">
+        <div className="flex flex-col md:flex-row items-center gap-20 mb-16">
+          <div className="md:w-1/2 text-center md:text-left">
+            <h3 className="text-2xl font-semibold text-orange-600 mb-4">
+              Undergraduate Courses
+            </h3>
+            <p className="text-gray-700 text-sm md:text-base leading-relaxed text-justify">
+              IIIT Nagpur offers a Bachelor of Technology (B.Tech.) degree with
+              diverse specializations designed to equip students with
+              industry-relevant skills in emerging technologies. The institute
+              provides B.Tech. programs in Computer Science & Engineering (CSE)
+              and Electronics & Communication Engineering (ECE), with
+              specialized tracks in Artificial Intelligence & Machine Learning,
+              Data Science & Analytics, Human-Computer Interaction & Gaming
+              Technology, and the Internet of Things (IoT). The curriculum
+              integrates hands-on learning, industry collaborations, and
+              state-of-the-art lab work, preparing students for careers in
+              tech-driven industries, research institutions, and academia.
+            </p>
+          </div>
+
+          <div className="md:w-1/2">
+            <img
+              src="/undergrad.jpg"
+              alt="Undergraduate Courses"
+              className="w-full h-64 object-cover rounded-lg shadow-lg border border-orange-300"
+            />
+          </div>
         </div>
-        <div className="">
-          <img src="" alt="" />
+
+        <div className="flex flex-col md:flex-row-reverse items-center gap-20 mb-16">
+          <div className="md:w-1/2 text-center md:text-left">
+            <h3 className="text-2xl font-semibold text-orange-600 mb-4">
+              Postgraduate
+            </h3>
+            <p className="text-gray-700 text-sm md:text-base leading-relaxed text-justify">
+              While IIIT Nagpur primarily focuses on undergraduate and doctoral
+              education, it offers a Post Graduate Diploma in Information &
+              Communication Technology (ICT) in collaboration with the Military
+              College of Telecommunication Engineering (MCTE). This program is
+              designed for military officers undergoing the Graduate Engineering
+              Equipment Orientation (GEEO) Course, equipping them with expertise
+              in ICT, telecommunications, and defense technology applications.
+              By bridging academia with military applications, this program
+              highlights IIIT Nagpur’s commitment to technological excellence.
+            </p>
+          </div>
+
+          <div className="md:w-1/2">
+            <img
+              src="/postgrad.jpg"
+              alt="Postgraduate Courses"
+              className="w-full h-64 object-cover rounded-lg shadow-lg border border-orange-300"
+            />
+          </div>
         </div>
       </div>
 
-      <div className="">
-        <div className="">
-          <h3>Postgraduate</h3>
-          <p>
-            While IIIT Nagpur primarily focuses on undergraduate and doctoral
-            education, it offers a Post Graduate Diploma in Information &
-            Communication Technology (ICT) in collaboration with the Military
-            College of Telecommunication Engineering (MCTE), Mhow, Madhya
-            Pradesh. This specialized program is designed for military officers
-            undergoing the Graduate Engineering Equipment Orientation (GEEO)
-            Course, equipping them with advanced expertise in ICT,
-            telecommunications, and defence technology applications. The
-            curriculum integrates theoretical instruction with practical
-            training, ensuring officers develop strategic technical skills
-            relevant to defense communications, cybersecurity, and network
-            infrastructure. By bridging the gap between academia and military
-            applications, this program reflects IIIT Nagpur’s commitment to
-            technological excellence and national service.
-          </p>
-        </div>
-        <div className="">
-          <img src="" alt="" />
-        </div>
-      </div>
+      <h2 className=" text-center font-bold text-4xl my-10">Our Room Gallery</h2>
 
-      <h2>Our Room Gallery</h2>
-
-      <div className="flex flex-col items-center justify-center p-6 relative w-full md:w-full mx-auto">
+      <div className="flex flex-col items-center justify-center p-6 relative w-full md:w-full mx-auto my-10">
         <div className="relative flex flex-wrap justify-center gap-6 md:gap-10 lg:gap-16 z-40">
           <div className="relative w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-2xl shadow-lg overflow-hidden border border-orange-300">
             <img
@@ -216,7 +221,7 @@ const Academics = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center p-6 relative w-full md:w-full mx-auto">
+      <div className="flex flex-col items-center justify-center p-6 relative w-full md:w-full mx-auto my-10">
         <div className="relative flex flex-wrap justify-center gap-6 md:gap-10 lg:gap-16 z-40">
           <div className="relative w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-2xl shadow-lg overflow-hidden border border-orange-300">
             <img
@@ -252,7 +257,7 @@ const Academics = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center p-6 relative w-full md:w-full mx-auto">
+      <div className="flex flex-col items-center justify-center p-6 relative w-full md:w-full mx-auto my-10">
         <div className="relative flex flex-wrap justify-center gap-6 md:gap-10 lg:gap-16 z-40">
           <div className="relative w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-2xl shadow-lg overflow-hidden border border-orange-300">
             <img
