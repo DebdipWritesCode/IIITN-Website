@@ -11,8 +11,8 @@ export const navbar = [
   },
   {
     id: 3,
-    name: "Contact",
-    url: "/contact",
+    name: "AI for Maharashtra",
+    url: "/ai-for-maharashtra",
   },
   {
     id: 4,
