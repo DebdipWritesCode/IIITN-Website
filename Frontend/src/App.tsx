@@ -34,6 +34,7 @@ const About_BS = lazy(() => import("./pages/About_BS"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const BOS_CSE = lazy(() => import("./pages/BOS_CSE"));
 const BOS_ECE = lazy(() => import("./pages/BOS_ECE"));
+const BOS_BS = lazy(() => import("./pages/BOS_BS"));
 
 // Layout wrapper for consistent UI
 interface LayoutProps {
@@ -76,6 +77,9 @@ const App: React.FC = () => {
           <Route path="/cse/about" element={<Layout><About_CSE /></Layout>} />
           <Route path="/ece/about" element={<Layout><About_ECE /></Layout>} />
           <Route path="/basic-sciences/about" element={<Layout><About_BS /></Layout>} />
+          <Route path="/ece/bos" element={<Layout><BOS_ECE /></Layout>} />
+          <Route path="/cse/bos" element={<Layout><BOS_CSE /></Layout>} />
+          <Route path="/basic-sciences/bos" element={<Layout><BOS_BS /></Layout>} />
           <Route path="/alumni/login" element={<Layout><AlumniLogin /></Layout>} />
           <Route path="/alumni/members" element={<Layout><Members /></Layout>} />
           <Route path="/alumni/about-us" element={<Layout><AlumniAboutUs /></Layout>} />
