@@ -13,6 +13,7 @@ import Convocation from "./pages/Convocation";
 import Mess from "./pages/mess";
 import HostelRules from "./pages/Hostel";
 import Scholarships from "./pages/Scholarships";
+import ClinicalCounseling from "./pages/counselling"; // Import the new page
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -49,6 +50,7 @@ const App: React.FC = () => {
         <Route path="/students/student-mess" element={<Layout><Mess /></Layout>} />
         <Route path="/students/hostel" element={<Layout><HostelRules /></Layout>} />
         <Route path="/students/scholarships" element={<Layout><Scholarships /></Layout>} />
+        <Route path="/students/clinical-counselling" element={<Layout><ClinicalCounseling /></Layout>} /> {/* New Route */}
         <Route path="/alumni/login" element={<Layout><AlumniLogin /></Layout>} />
         <Route path="/alumni/members" element={<Layout><Members /></Layout>} />
       </Routes>
