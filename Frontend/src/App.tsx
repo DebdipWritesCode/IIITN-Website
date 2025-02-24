@@ -23,6 +23,7 @@ import AlumniAboutUs from "./pages/AlumniAboutUs";
 import AchievementsPage from "./pages/acheivements";
 import ActivitiesPage from "./pages/activities"; // Import ActivitiesPage
 import Postgraduate from "./pages/Postgraduate";
+import UGRule from "./pages/UGRule";
 
 interface LayoutProps {
   children: ReactNode;
@@ -61,6 +62,7 @@ const App: React.FC = () => {
         <Route path="/students/achievements" element={<Layout><AchievementsPage /></Layout>} />
         <Route path="/students/activities" element={<Layout><ActivitiesPage /></Layout>} /> {/* Added Activities Route */}
         <Route path="/admissions/mtech" element={<Layout><Postgraduate /></Layout>} />
+        <Route path="/admissions/ug-rules" element={<Layout><UGRule /></Layout>} />
       </Routes>
     </div>
   );
