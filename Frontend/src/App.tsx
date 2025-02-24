@@ -13,13 +13,14 @@ import Convocation from "./pages/Convocation";
 import Mess from "./pages/mess";
 import HostelRules from "./pages/Hostel";
 import Scholarships from "./pages/Scholarships";
-import ClinicalCounseling from "./pages/counselling"; // Import the new page
+import ClinicalCounseling from "./pages/counselling";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import AlumniLogin from "./pages/AlumniLogin";
 import Members from "./pages/Members";
 import AlumniAboutUs from "./pages/AlumniAboutUs";
+import AchievementsPage from "./pages/acheivements"; // Import AchievementsPage
 
 interface LayoutProps {
   children: ReactNode;
@@ -51,10 +52,11 @@ const App: React.FC = () => {
         <Route path="/students/student-mess" element={<Layout><Mess /></Layout>} />
         <Route path="/students/hostel" element={<Layout><HostelRules /></Layout>} />
         <Route path="/students/scholarships" element={<Layout><Scholarships /></Layout>} />
-        <Route path="/students/clinical-counselling" element={<Layout><ClinicalCounseling /></Layout>} /> {/* New Route */}
+        <Route path="/students/clinical-counselling" element={<Layout><ClinicalCounseling /></Layout>} />
         <Route path="/alumni/login" element={<Layout><AlumniLogin /></Layout>} />
         <Route path="/alumni/members" element={<Layout><Members /></Layout>} />
         <Route path="/alumni/about-us" element={<Layout><AlumniAboutUs /></Layout>} />
+        <Route path="/students/achievements" element={<Layout><AchievementsPage /></Layout>} /> {/* Added Achievements Route */}
       </Routes>
     </div>
   );
