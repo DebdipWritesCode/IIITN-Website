@@ -136,7 +136,7 @@ export const subNavbar = [
     url: "/admissions",
     subLinks: [
       { id: 1, name: "Undergraduate B.Tech", url: "/admissions/btech" },
-      { id: 2, name: "Postgraduate M.Tech", url: "/admissions/mtech" },
+      { id: 2, name: "Postgraduate", url: "/admissions/mtech" },
       { id: 3, name: "UG Academic Rule Book", url: "/admissions/ug-rules" },
       { id: 4, name: "PG Academic Rule Book", url: "/admissions/pg-rules" },
     ],

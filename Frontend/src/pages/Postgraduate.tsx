@@ -1,5 +1,3 @@
-import React from "react";
-
 const phdAdmissions = [
     {
         title: "Schedule of Written Test and Interview",
