@@ -11,6 +11,8 @@ import Clubs from "./pages/StudentsClubs";
 import Fees from "./pages/Fees";
 import Convocation from "./pages/Convocation";
 import Mess from "./pages/mess";
+import HostelRules from "./pages/Hostel";
+import Scholarships from "./pages/Scholarships";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -43,6 +45,8 @@ const App: React.FC = () => {
         <Route path="/students/fees" element={<Layout><Fees /></Layout>} />
         <Route path="/students/convocation-2023" element={<Layout><Convocation /></Layout>} />
         <Route path="/students/student-mess" element={<Layout><Mess /></Layout>} />
+        <Route path="/students/hostel" element={<Layout><HostelRules /></Layout>} />
+        <Route path="/students/scholarships" element={<Layout><Scholarships /></Layout>} />
       </Routes>
     </div>
   );
