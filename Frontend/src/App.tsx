@@ -11,9 +11,13 @@ import Clubs from "./pages/StudentsClubs";
 import Fees from "./pages/Fees";
 import Convocation from "./pages/Convocation";
 import Mess from "./pages/mess";
+import HostelRules from "./pages/Hostel";
+import Scholarships from "./pages/Scholarships";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import AlumniLogin from "./pages/AlumniLogin";
+import Members from "./pages/Members";
 
 interface LayoutProps {
   children: ReactNode;
@@ -43,6 +47,10 @@ const App: React.FC = () => {
         <Route path="/students/fees" element={<Layout><Fees /></Layout>} />
         <Route path="/students/convocation-2023" element={<Layout><Convocation /></Layout>} />
         <Route path="/students/student-mess" element={<Layout><Mess /></Layout>} />
+        <Route path="/students/hostel" element={<Layout><HostelRules /></Layout>} />
+        <Route path="/students/scholarships" element={<Layout><Scholarships /></Layout>} />
+        <Route path="/alumni/login" element={<Layout><AlumniLogin /></Layout>} />
+        <Route path="/alumni/members" element={<Layout><Members /></Layout>} />
       </Routes>
     </div>
   );
