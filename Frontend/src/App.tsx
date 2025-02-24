@@ -34,6 +34,9 @@ const About_BS = lazy(() => import("./pages/About_BS"));
 const BOS_BS = lazy(() => import("./pages/BOS_BS"));
 const BOS_CSE = lazy(() => import("./pages/BOS_CSE"));
 const BOS_ECE = lazy(() => import("./pages/BOS_ECE"));
+const Achievements_CSE = lazy(() => import("./pages/Achievements_CSE"));
+const Achievements_ECE = lazy(() => import("./pages/Achievements_ECE"));
+const Achievements_BS = lazy(() => import("./pages/Achievements_BS"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const AAbout = lazy(() => import("./pages/AAbout"));
 
@@ -80,6 +83,9 @@ const App: React.FC = () => {
           <Route path="/basic-sciences/about" element={<Layout><About_BS /></Layout>} />
           <Route path="/ece/bos" element={<Layout><BOS_ECE /></Layout>} />
           <Route path="/cse/bos" element={<Layout><BOS_CSE /></Layout>} />
+          <Route path="/cse/achievements" element={<Layout><Achievements_CSE /></Layout>} />
+          <Route path="/ece/achievements" element={<Layout><Achievements_ECE /></Layout>} />
+          <Route path="/basic-sciences/achievements" element={<Layout><Achievements_BS /></Layout>} />
           <Route path="/basic-sciences/bos" element={<Layout><BOS_BS /></Layout>} />
           <Route path="/alumni/login" element={<Layout><AlumniLogin /></Layout>} />
           <Route path="/alumni/members" element={<Layout><Members /></Layout>} />
