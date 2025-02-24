@@ -26,19 +26,23 @@ const ActivitiesPage = lazy(() => import("./pages/activities"));
 const Postgraduate = lazy(() => import("./pages/Postgraduate"));
 const Internships = lazy(() => import("./pages/internships"));
 const UGRules = lazy(() => import("./pages/UGRule"));
-const PGRule = lazy(() => import("./pages/PGRule"))
+const PGRule = lazy(() => import("./pages/PGRule"));
 const About_CSE = lazy(() => import("./pages/About_CSE"));
 const About_ECE = lazy(() => import("./pages/About_ECE"));
-const TnPCell = lazy(() => import("./pages/contact_t&p")); // Added Training & Placement page
+const TnPCell = lazy(() => import("./pages/contact_t&p"));
 const About_BS = lazy(() => import("./pages/About_BS"));
 const BOS_BS = lazy(() => import("./pages/BOS_BS"));
 const BOS_CSE = lazy(() => import("./pages/BOS_CSE"));
 const BOS_ECE = lazy(() => import("./pages/BOS_ECE"));
+const Achievements_CSE = lazy(() => import("./pages/Achievements_CSE"));
+const Achievements_ECE = lazy(() => import("./pages/Achievements_ECE"));
+const Achievements_BS = lazy(() => import("./pages/Achievements_BS"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const ForStudents = lazy(() => import("./pages/forStudents"));
 const AAbout = lazy(() => import("./pages/AAbout"));
+const Mhai = lazy(() => import("./pages/Mhai"));
 const ForCompanies = lazy(() => import("./pages/for_companies"));
-
+const WhyRecruitIIITN = lazy(() => import("./pages/whyrecruit")); // Added "Why Recruit" page
 
 // Layout wrapper for consistent UI
 interface LayoutProps {
@@ -83,16 +87,22 @@ const App: React.FC = () => {
           <Route path="/basic-sciences/about" element={<Layout><About_BS /></Layout>} />
           <Route path="/ece/bos" element={<Layout><BOS_ECE /></Layout>} />
           <Route path="/cse/bos" element={<Layout><BOS_CSE /></Layout>} />
+          <Route path="/cse/achievements" element={<Layout><Achievements_CSE /></Layout>} />
+          <Route path="/ece/achievements" element={<Layout><Achievements_ECE /></Layout>} />
+          <Route path="/basic-sciences/achievements" element={<Layout><Achievements_BS /></Layout>} />
           <Route path="/basic-sciences/bos" element={<Layout><BOS_BS /></Layout>} />
           <Route path="/alumni/login" element={<Layout><AlumniLogin /></Layout>} />
           <Route path="/alumni/members" element={<Layout><Members /></Layout>} />
           <Route path="/alumni/about-us" element={<Layout><AlumniAboutUs /></Layout>} />
           <Route path="/about" element={<Layout><AAbout /></Layout>} />
+           <Route path="/ai-for-maharashtra" element={<Layout><Mhai /></Layout>} />
           <Route path="/placements/contact" element={<Layout><TnPCell /></Layout>} /> {/* Added Route for TnP Cell */}
           <Route path="*" element={<NotFound />} /> {/* Handles all undefined routes */}
-          <Route path="/placements/for-students" element={<Layout><ForStudents /></Layout>} /> 
+          <Route path="/placements/contact" element={<Layout><TnPCell /></Layout>} />
+          <Route path="*" element={<NotFound />} />
+          <Route path="/placements/for-students" element={<Layout><ForStudents /></Layout>} />
           <Route path="/placements/for-companies" element={<Layout><ForCompanies /></Layout>} />
-
+          <Route path="/placements/why-recruit" element={<Layout><WhyRecruitIIITN /></Layout>} /> {/* Added new route */}
         </Routes>
       </Suspense>
     </div>
