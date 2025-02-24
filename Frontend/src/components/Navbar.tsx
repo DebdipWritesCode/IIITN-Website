@@ -56,9 +56,9 @@ const Navbar = () => {
                   onMouseEnter={() => setHoveredItem(item.id)}
                   // onMouseLeave={() => setHoveredItem(null)}
                 >
-                  <button className="hover:text-orange-600 cursor-pointer">
+                  <Link to={item.url} className="hover:text-orange-600 cursor-pointer">
                     {item.name}
-                  </button>
+                  </Link>
 
                   {hoveredItem === item.id &&
                     (item.name === "Academics" ? (
@@ -95,9 +95,9 @@ const Navbar = () => {
                   key={item.id}
                   className="relative"
                   onMouseEnter={() => setHoveredItem(item.id)}>
-                  <button className="hover:text-orange-600 cursor-pointer">
+                  <Link to={item.url} className="hover:text-orange-600 cursor-pointer">
                     {item.name}
-                  </button>
+                  </Link>
 
                   {hoveredItem === item.id && item.subLinks && (
                     <div

@@ -25,6 +25,7 @@ export const subNavbar = [
   {
     id: 1,
     name: "Academics",
+    url: "/academics",
     categories: [
       {
         id: 1,
@@ -105,6 +106,7 @@ export const subNavbar = [
   {
     id: 2,
     name: "Governance",
+    url: "/governance",
     subLinks: [
       {
         id: 1,
@@ -131,26 +133,39 @@ export const subNavbar = [
   {
     id: 3,
     name: "Admissions",
+    url: "/admissions",
     subLinks: [
-      { id: 1, name: "B.Tech Admissions", url: "/admissions/btech" },
-      { id: 2, name: "M.Tech Admissions", url: "/admissions/mtech" },
-      { id: 3, name: "PhD Admissions", url: "/admissions/phd" },
-      { id: 4, name: "Fee Structure", url: "/admissions/fee-structure" },
+      { id: 1, name: "Undergraduate B.Tech", url: "/admissions/btech" },
+      { id: 2, name: "Postgraduate M.Tech", url: "/admissions/mtech" },
+      { id: 3, name: "UG Academic Rule Book", url: "/admissions/ug-rules" },
+      { id: 4, name: "PG Academic Rule Book", url: "/admissions/pg-rules" },
     ],
   },
   {
     id: 4,
     name: "Students",
+    url: "/students",
     subLinks: [
-      { id: 1, name: "Clubs", url: "/students/clubs" },
-      { id: 2, name: "Hostels", url: "/students/hostels" },
-      { id: 3, name: "Scholarships", url: "/students/scholarships" },
-      { id: 4, name: "Library", url: "/students/library" },
+      { id: 1, name: "Activities", url: "/students/activities" },
+      { id: 2, name: "Achievements", url: "/students/achievements" },
+      {
+        id: 3,
+        name: "Clinical Counselling",
+        url: "/students/clinical-counselling",
+      },
+      { id: 4, name: "Scholarships", url: "/students/scholarships" },
+      { id: 5, name: "Hostel", url: "/students/hostel" },
+      { id: 6, name: "Student Mess", url: "/students/student-mess" },
+      { id: 7, name: "Download", url: "/students/download" },
+      { id: 8, name: "Convocation 2023", url: "/students/convocation-2023" },
+      { id: 9, name: "Fees", url: "/students/fees" },
+      { id: 10, name: "Clubs", url: "/students/clubs" },
     ],
   },
   {
     id: 5,
     name: "Alumni",
+    url: "/alumni",
     subLinks: [
       { id: 1, name: "Alumni Network", url: "/alumni/network" },
       { id: 2, name: "Events", url: "/alumni/events" },
@@ -160,10 +175,19 @@ export const subNavbar = [
   {
     id: 6,
     name: "Placements",
+    url: "/placements",
     subLinks: [
-      { id: 1, name: "Placement Statistics", url: "/placements/statistics" },
-      { id: 2, name: "Recruiters", url: "/placements/recruiters" },
-      { id: 3, name: "Internships", url: "/placements/internships" },
+      { id: 1, name: "About Us", url: "/placements/about" },
+      {
+        id: 2,
+        name: "Why Recruit from IIIT Nagpur?",
+        url: "/placements/why-recruit",
+      },
+      { id: 3, name: "Placement Statistics", url: "/placements/statistics" },
+      { id: 4, name: "For Companies", url: "/placements/for-companies" },
+      { id: 5, name: "For Students", url: "/placements/for-students" },
+      { id: 6, name: "Contact T&P", url: "/placements/contact" },
+      { id: 7, name: "Internships", url: "/placements/internships" },
     ],
   },
 ];
