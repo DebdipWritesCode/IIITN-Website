@@ -43,11 +43,6 @@ const Fees: React.FC = () => {
           </div>
         </div>
       </main>
-
-      {/* Footer */}
-      <footer className="text-center py-6 bg-orange-600 text-white mt-10 rounded-t-3xl">
-        <p>© {new Date().getFullYear()} IIIT Nagpur | All Rights Reserved</p>
-      </footer>
     </div>
   );
 };

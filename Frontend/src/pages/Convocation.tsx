@@ -68,10 +68,6 @@ const Convocation: React.FC = () => {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="text-center py-6 bg-orange-600 text-white mt-10">
-        <p>© {new Date().getFullYear()} IIIT Nagpur | All Rights Reserved</p>
-      </footer>
     </div>
   );
 };
