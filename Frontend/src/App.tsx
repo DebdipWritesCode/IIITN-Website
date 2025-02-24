@@ -31,6 +31,7 @@ const About_ECE = lazy(() => import("./pages/About_ECE"));
 const TnPCell = lazy(() => import("./pages/contact_t&p")); // Added Training & Placement page
 const About_BS = lazy(() => import("./pages/About_BS"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const ForStudents = lazy(() => import("./pages/forStudents"));
 
 // Layout wrapper for consistent UI
 interface LayoutProps {
@@ -77,6 +78,7 @@ const App: React.FC = () => {
           <Route path="/alumni/about-us" element={<Layout><AlumniAboutUs /></Layout>} />
           <Route path="/placements/contact" element={<Layout><TnPCell /></Layout>} /> {/* Added Route for TnP Cell */}
           <Route path="*" element={<NotFound />} /> {/* Handles all undefined routes */}
+          <Route path="/placements/for-students" element={<Layout><ForStudents /></Layout>} /> 
         </Routes>
       </Suspense>
     </div>
