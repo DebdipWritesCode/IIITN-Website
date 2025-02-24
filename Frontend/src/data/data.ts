@@ -167,9 +167,9 @@ export const subNavbar = [
     name: "Alumni",
     url: "/alumni",
     subLinks: [
-      { id: 1, name: "Alumni Network", url: "/alumni/network" },
-      { id: 2, name: "Events", url: "/alumni/events" },
-      { id: 3, name: "Contributions", url: "/alumni/contributions" },
+      { id: 1, name: "Member Login", url: "/alumni/login" },
+      { id: 2, name: "Members", url: "/alumni/members" },
+      { id: 3, name: "About Us", url: "/alumni/about-us" },
     ],
   },
   {

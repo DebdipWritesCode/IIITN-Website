@@ -22,7 +22,7 @@ const Navbar = () => {
   }, [currentImage]);
 
   return (
-    <nav className="font-montserrat fixed w-full z-30">
+    <nav className="font-montserrat fixed w-full z-30 bg-white shadow-md">
       <div className="flex items-center justify-between h-14 bg-orange-600 px-5 py-1 text-white font-semibold text-xl">
         <div className="flex gap-10 items-center">
           {navbar.map((item, index) =>

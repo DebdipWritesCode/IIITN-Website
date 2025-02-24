@@ -24,12 +24,10 @@ const SpecialSubNavbar: React.FC<{ data: SpecialSubNavbarProps }> = ({
       <div className="w-full flex space-x-10 justify-between">
         {data.categories.map((category) => (
           <div key={category.id} className="flex flex-col">
-            {/* Category Heading */}
             <h3 className="bg-[#C1500C] text-white font-semibold text-lg px-6 py-3 rounded-t-md">
               {category.name}
             </h3>
 
-            {/* SubLinks */}
             <ul className="bg-gray-100 w-60 shadow-md rounded-b-md">
               {category.subLinks.map((link) => (
                 <li
