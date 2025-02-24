@@ -31,10 +31,11 @@ const About_CSE = lazy(() => import("./pages/About_CSE"));
 const About_ECE = lazy(() => import("./pages/About_ECE"));
 const TnPCell = lazy(() => import("./pages/contact_t&p")); // Added Training & Placement page
 const About_BS = lazy(() => import("./pages/About_BS"));
-const NotFound = lazy(() => import("./pages/NotFound"));
+const BOS_BS = lazy(() => import("./pages/BOS_BS"));
 const BOS_CSE = lazy(() => import("./pages/BOS_CSE"));
 const BOS_ECE = lazy(() => import("./pages/BOS_ECE"));
-const BOS_BS = lazy(() => import("./pages/BOS_BS"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const AAbout = lazy(() => import("./pages/AAbout"));
 
 // Layout wrapper for consistent UI
 interface LayoutProps {
