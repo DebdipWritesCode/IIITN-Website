@@ -33,9 +33,16 @@ const achievements = {
 
 const AchievementsPage: React.FC = () => {
   return (
-    <div className="bg-orange-50 min-h-screen p-8 font-sans">
-      <h1 className="text-6xl font-bold text-orange-700 text-center mb-10 underline">Achievements</h1>
-      <div className="max-w-6xl mx-auto space-y-10">
+    <div className="min-h-screen bg-gray-50 text-gray-900 font-sans">
+      {/* Header */}
+      <header className="bg-orange-600 text-white py-14 text-center shadow-md">
+        <h1 className="text-5xl font-extrabold">🏅 Achievements</h1>
+        <p className="mt-2 text-lg font-medium">
+          Celebrating the success and accomplishments of our students!
+        </p>
+      </header>
+      
+      <div className="p-10 max-w-6xl mx-auto space-y-10">
         {Object.entries(achievements).map(([dept, years]) => (
           <div key={dept} className="bg-white p-10 rounded-2xl shadow-lg border-4 border-orange-500">
             <h2 className="text-4xl font-bold text-orange-800 underline mb-5">{dept} Department</h2>

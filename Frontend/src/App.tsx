@@ -20,7 +20,8 @@ import Footer from "./components/Footer";
 import AlumniLogin from "./pages/AlumniLogin";
 import Members from "./pages/Members";
 import AlumniAboutUs from "./pages/AlumniAboutUs";
-import AchievementsPage from "./pages/acheivements"; // Import AchievementsPage
+import AchievementsPage from "./pages/acheivements";
+import ActivitiesPage from "./pages/activities"; // Import ActivitiesPage
 
 interface LayoutProps {
   children: ReactNode;
@@ -56,7 +57,8 @@ const App: React.FC = () => {
         <Route path="/alumni/login" element={<Layout><AlumniLogin /></Layout>} />
         <Route path="/alumni/members" element={<Layout><Members /></Layout>} />
         <Route path="/alumni/about-us" element={<Layout><AlumniAboutUs /></Layout>} />
-        <Route path="/students/achievements" element={<Layout><AchievementsPage /></Layout>} /> {/* Added Achievements Route */}
+        <Route path="/students/achievements" element={<Layout><AchievementsPage /></Layout>} />
+        <Route path="/students/activities" element={<Layout><ActivitiesPage /></Layout>} /> {/* Added Activities Route */}
       </Routes>
     </div>
   );
