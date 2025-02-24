@@ -20,12 +20,9 @@ import Footer from "./components/Footer";
 import AlumniLogin from "./pages/AlumniLogin";
 import Members from "./pages/Members";
 import AlumniAboutUs from "./pages/AlumniAboutUs";
-<<<<<<< HEAD
 import AchievementsPage from "./pages/acheivements";
 import ActivitiesPage from "./pages/activities"; // Import ActivitiesPage
-=======
 import Postgraduate from "./pages/Postgraduate";
->>>>>>> 6024c9d8f7fe50b6bdf92a0f9bd6648314dd2bad
 
 interface LayoutProps {
   children: ReactNode;
@@ -61,12 +58,9 @@ const App: React.FC = () => {
         <Route path="/alumni/login" element={<Layout><AlumniLogin /></Layout>} />
         <Route path="/alumni/members" element={<Layout><Members /></Layout>} />
         <Route path="/alumni/about-us" element={<Layout><AlumniAboutUs /></Layout>} />
-<<<<<<< HEAD
         <Route path="/students/achievements" element={<Layout><AchievementsPage /></Layout>} />
         <Route path="/students/activities" element={<Layout><ActivitiesPage /></Layout>} /> {/* Added Activities Route */}
-=======
         <Route path="/admissions/mtech" element={<Layout><Postgraduate /></Layout>} />
->>>>>>> 6024c9d8f7fe50b6bdf92a0f9bd6648314dd2bad
       </Routes>
     </div>
   );
