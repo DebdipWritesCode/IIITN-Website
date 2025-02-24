@@ -78,6 +78,7 @@ const App: React.FC = () => {
           <Route path="/alumni/login" element={<Layout><AlumniLogin /></Layout>} />
           <Route path="/alumni/members" element={<Layout><Members /></Layout>} />
           <Route path="/alumni/about-us" element={<Layout><AlumniAboutUs /></Layout>} />
+          <Route path="/about" element={<Layout><AAbout /></Layout>} />
           <Route path="/placements/contact" element={<Layout><TnPCell /></Layout>} /> {/* Added Route for TnP Cell */}
           <Route path="*" element={<NotFound />} /> {/* Handles all undefined routes */}
         </Routes>
