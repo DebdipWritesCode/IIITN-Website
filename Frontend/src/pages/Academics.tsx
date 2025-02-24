@@ -2,6 +2,7 @@ import One from "../assets/academics/1.png";
 import Two from "../assets/academics/2.png";
 import Three from "../assets/academics/3.png";
 import Director from "../assets/Director.jpg";
+import UG from "../assets/academics/UG.jpg";
 
 const Academics = () => {
   return (
@@ -149,9 +150,9 @@ const Academics = () => {
 
           <div className="md:w-1/2">
             <img
-              src="/undergrad.jpg"
+              src={UG}
               alt="Undergraduate Courses"
-              className="w-full h-64 object-cover rounded-lg shadow-lg border border-orange-300"
+              className="h-[400px] object-cover rounded-lg shadow-lg border border-orange-300"
             />
           </div>
         </div>
@@ -178,7 +179,7 @@ const Academics = () => {
             <img
               src="/postgrad.jpg"
               alt="Postgraduate Courses"
-              className="w-full h-64 object-cover rounded-lg shadow-lg border border-orange-300"
+              className="h-[400px] object-cover rounded-lg shadow-lg border border-orange-300"
             />
           </div>
         </div>

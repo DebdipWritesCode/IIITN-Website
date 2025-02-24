@@ -26,8 +26,11 @@ const ActivitiesPage = lazy(() => import("./pages/activities"));
 const Postgraduate = lazy(() => import("./pages/Postgraduate"));
 const Internships = lazy(() => import("./pages/internships"));
 const UGRules = lazy(() => import("./pages/UGRule"));
+const PGRule = lazy(() => import("./pages/PGRule"))
 const About_CSE = lazy(() => import("./pages/About_CSE"));
 const About_ECE = lazy(() => import("./pages/About_ECE"));
+const TnPCell = lazy(() => import("./pages/contact_t&p")); // Added Training & Placement page
+const About_BS = lazy(() => import("./pages/About_BS"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const AAbout = lazy(() => import("./pages/AAbout"));
 
@@ -49,7 +52,6 @@ const App: React.FC = () => {
     <div className="bg-white min-h-screen">
       <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
         <Routes>
-          <Route path="*" element={<NotFound />} />
           <Route path="/" element={<Layout><Home /></Layout>} />
           <Route path="/academics" element={<Layout><Academics /></Layout>} />
           <Route path="/governance" element={<Layout><Governance /></Layout>} />
@@ -63,18 +65,21 @@ const App: React.FC = () => {
           <Route path="/students/student-mess" element={<Layout><Mess /></Layout>} />
           <Route path="/students/hostel" element={<Layout><HostelRules /></Layout>} />
           <Route path="/students/scholarships" element={<Layout><Scholarships /></Layout>} />
-          <Route path="/students/clinical-counseling" element={<Layout><ClinicalCounseling /></Layout>} />
+          <Route path="/students/clinical-counselling" element={<Layout><ClinicalCounseling /></Layout>} />
           <Route path="/students/achievements" element={<Layout><AchievementsPage /></Layout>} />
           <Route path="/students/activities" element={<Layout><ActivitiesPage /></Layout>} />
           <Route path="/admissions/mtech" element={<Layout><Postgraduate /></Layout>} />
           <Route path="/placements/internships" element={<Layout><Internships /></Layout>} />
           <Route path="/admissions/ug-rules" element={<Layout><UGRules /></Layout>} />
+          <Route path="/admissions/pg-rules" element={<Layout><PGRule /></Layout>} />
           <Route path="/cse/about" element={<Layout><About_CSE /></Layout>} />
           <Route path="/ece/about" element={<Layout><About_ECE /></Layout>} />
+          <Route path="/basic-sciences/about" element={<Layout><About_BS /></Layout>} />
           <Route path="/alumni/login" element={<Layout><AlumniLogin /></Layout>} />
           <Route path="/alumni/members" element={<Layout><Members /></Layout>} />
           <Route path="/alumni/about-us" element={<Layout><AlumniAboutUs /></Layout>} />
-          <Route path="/about" element={<Layout><AAbout /></Layout>} />
+          <Route path="/placements/contact" element={<Layout><TnPCell /></Layout>} /> {/* Added Route for TnP Cell */}
+          <Route path="*" element={<NotFound />} /> {/* Handles all undefined routes */}
         </Routes>
       </Suspense>
     </div>
