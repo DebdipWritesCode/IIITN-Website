@@ -42,7 +42,7 @@ const AiforMh = () => {
           </div>
           <div className="flex justify-center">
             <img
-              src="\assets\IMG_5784.JPG"
+              src="src\assets\IMG_5784.jpg"
               alt="AI Center of Excellence"
               className="w-[306px] h-[408px] object-cover rounded-lg shadow-md"
             />
@@ -73,7 +73,7 @@ const AiforMh = () => {
           </div>
           <div className="flex justify-center order-1 md:order-2">
             <img
-              src="assets\IMG_1436.JPG"
+              src="src\assets\IMG_1436.JPG"
               alt="Generative AI Certification"
               className="w-[306px] h-[408px] object-cover rounded-lg shadow-md"
             />
@@ -103,7 +103,7 @@ const AiforMh = () => {
           </div>
           <div className="flex justify-center">
             <img
-              src="\assets\IMG_5784.JPG"
+              src="src\assets\IMG_5784.JPG"
               alt="Collaborative Research and Development"
               className="w-[306px] h-[408px] object-cover rounded-lg shadow-md"
             />
