@@ -28,11 +28,8 @@ const Internships = lazy(() => import("./pages/internships"));
 const UGRules = lazy(() => import("./pages/UGRule"));
 const About_CSE = lazy(() => import("./pages/About_CSE"));
 const About_ECE = lazy(() => import("./pages/About_ECE"));
-<<<<<<< HEAD
 const TnPCell = lazy(() => import("./pages/contact_t&p")); // Added Training & Placement page
-=======
 const About_BS = lazy(() => import("./pages/About_BS"));
->>>>>>> 7369bb574d21ec276d5f5992ac07d0d036c4aa39
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Layout wrapper for consistent UI
@@ -78,11 +75,8 @@ const App: React.FC = () => {
           <Route path="/alumni/login" element={<Layout><AlumniLogin /></Layout>} />
           <Route path="/alumni/members" element={<Layout><Members /></Layout>} />
           <Route path="/alumni/about-us" element={<Layout><AlumniAboutUs /></Layout>} />
-<<<<<<< HEAD
           <Route path="/placements/contact" element={<Layout><TnPCell /></Layout>} /> {/* Added Route for TnP Cell */}
-=======
           <Route path="*" element={<NotFound />} /> {/* Handles all undefined routes */}
->>>>>>> 7369bb574d21ec276d5f5992ac07d0d036c4aa39
         </Routes>
       </Suspense>
     </div>
