@@ -8,7 +8,7 @@ const Hero = () => {
         autoPlay
         loop
         muted
-        className="w-full h-170 object-cover"
+        className="w-full h-150 object-cover"
       />
 
       <div className="absolute left-0 bottom-0 h-3/4 w-full bg-gradient-to-t from-black via-black/80 to-transparent flex items-end p-6">
@@ -17,8 +17,7 @@ const Hero = () => {
             Welcome to IIIT Nagpur
           </h1>
           <h3 className="text-sm md:text-2xl mt-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a
-            justo non urna vehicula posuere.
+          "Where Innovation Meets Excellence – Empowering Minds, Transforming Futures!"
           </h3>
         </div>
       </div>
