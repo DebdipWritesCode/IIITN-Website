@@ -55,17 +55,10 @@ const Staff = lazy(() => import("./pages/staff"));
 const BuildingWorksCommittee = lazy(() => import("./pages/buildingworkscommitee"));
 const Senate = lazy(() => import("./pages/senate"));
 const Finance = lazy(() => import("./pages/finance"));
-const Board = lazy(() => import("./pages/board"));
-<<<<<<< HEAD
+const Board = lazy(() => import("./pages/board"))
 const Overview_PhD = lazy(() => import("./pages/Overview_PhD"));
-const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics")); // Added "Why Recruit" page
-=======
+const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics")); // Added "Why Recruit" pag
 const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics"));
-<<<<<<< HEAD
-const Faculty_BS = lazy(() => import("./pages/faculty_bos")); 
-=======
->>>>>>> c314dfb1aa8d956b7490b44d384274241913d5d9
->>>>>>> 55f014f1ae4c9e4f10ad0c56183454df3eb3153f
 
 interface LayoutProps {
   children: ReactNode;
