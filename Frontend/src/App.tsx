@@ -60,6 +60,7 @@ const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics")); /
 const Btech = lazy(() => import("./pages/btech"));
 const Phd = lazy(() => import("./pages/phd"));
 const Report = lazy(() => import("./pages/report"));
+const Faculty_bos = lazy(() => import("./pages/faculty_bos"));
 
 interface LayoutProps {
   children: ReactNode;
@@ -138,6 +139,7 @@ const App: React.FC = () => {
           <Route path="/programs/btech" element={<Layout><Btech /></Layout>} />
           <Route path="/programs/phd" element={<Layout><Phd /></Layout>} />
           <Route path="/programs/reports" element={<Layout><Report /></Layout>} />
+          <Route path="/basic-sciences/faculty" element={<Layout><Faculty_bos /></Layout>} />
         </Routes>
       </Suspense>
     </div>
