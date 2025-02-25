@@ -71,7 +71,9 @@ const LabBS = lazy(() => import("./pages/LabBS"));
 const Report = lazy(() => import("./pages/report"));
 const Btech = lazy(() => import("./pages/btech"));
 const Phd = lazy(() => import("./pages/phd"));
-
+const Cse_Events = lazy(() => import("./pages/events_cse"));
+const BS_Events = lazy(() => import("./pages/events_bs"));
+const ECE_Events = lazy(() => import("./pages/events_ece"));
 
 interface LayoutProps {
   children: ReactNode;
@@ -163,6 +165,9 @@ const App: React.FC = () => {
           <Route path="/programs/reports" element={<Layout><Report /></Layout>} />
           <Route path="/programs/btech" element={<Layout><Btech /></Layout>} />
           <Route path="/programs/phd" element={<Layout><Phd /></Layout>} />
+          <Route path="/cse/events" element={<Layout><Cse_Events /></Layout>} />
+          <Route path="/basic-sciences/events" element={<Layout><BS_Events /></Layout>} />
+          <Route path="/ece/events" element={<Layout><ECE_Events /></Layout>} />
         </Routes>
       </Suspense>
     </div>
