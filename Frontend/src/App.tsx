@@ -66,6 +66,8 @@ const ProjectsCSE = lazy(() => import("./pages/ProjectsCSE"));
 const ProjectsECE = lazy(() => import("./pages/ProjectsECE"));
 const ProjectsBS = lazy(() => import("./pages/ProjectsBS"));
 const LabCSE = lazy(() => import("./pages/LabCSE"));
+const LabECE = lazy(() => import("./pages/LabECE"));
+const LabBS = lazy(() => import("./pages/LabBS"));
 const Report = lazy(() => import("./pages/report"));
 const Btech = lazy(() => import("./pages/btech"));
 const Phd = lazy(() => import("./pages/phd"));
@@ -74,6 +76,10 @@ const StudentLogin = lazy(() => import("./pages/StudentLogin"));
 const AdminLogin = lazy(() => import("./pages/AdminLogin"));
 const ManageEvents = lazy(() => import("./pages/ManageEvents"));
 
+const Curriculum = lazy(() => import("./pages/Curriculum"));
+const Cse_Events = lazy(() => import("./pages/events_cse"));
+const BS_Events = lazy(() => import("./pages/events_bs"));
+const ECE_Events = lazy(() => import("./pages/events_ece"));
 
 interface LayoutProps {
   children: ReactNode;
@@ -160,6 +166,8 @@ const App: React.FC = () => {
           <Route path="/ece/projects" element={<Layout><ProjectsECE /></Layout>} />
           <Route path="/basic-sciences/projects" element={<Layout><ProjectsBS /></Layout>} />
           <Route path="/cse/laboratory" element={<Layout><LabCSE /></Layout>} />
+          <Route path="/ece/laboratory" element={<Layout><LabECE /></Layout>} />
+          <Route path="/basic-sciences/laboratory" element={<Layout><LabBS /></Layout>} />
           <Route path="/programs/reports" element={<Layout><Report /></Layout>} />
           <Route path="/programs/btech" element={<Layout><Btech /></Layout>} />
           <Route path="/programs/phd" element={<Layout><Phd /></Layout>} />
@@ -167,6 +175,10 @@ const App: React.FC = () => {
           <Route path="/student-login" element={<StudentLogin />} />
           <Route path="/admin-login" element={<AdminLogin />} />
           <Route path="/admin/manage-events" element={<ManageEvents />} />
+          <Route path="/programs/curriculum" element={<Layout><Curriculum /></Layout>} />
+          <Route path="/cse/events" element={<Layout><Cse_Events /></Layout>} />
+          <Route path="/basic-sciences/events" element={<Layout><BS_Events /></Layout>} />
+          <Route path="/ece/events" element={<Layout><ECE_Events /></Layout>} />
         </Routes>
       </Suspense>
     </div>
