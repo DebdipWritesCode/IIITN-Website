@@ -118,69 +118,69 @@ const Projects = () => {
 
       {/* Completed Projects */}
       <section className="mt-10">
-        <h2 className="text-3xl font-semibold pb-3 text-green-600">
-          Completed Projects
-        </h2>
-        <div className="overflow-x-auto">
-          <table className="w-full border-collapse border border-green-300">
-            <thead className="bg-green-600 text-white">
-              <tr>
-                <th className="px-4 py-3 border border-green-300">Sr. No</th>
-                <th className="px-4 py-3 border border-green-300">Faculty</th>
-                <th className="px-4 py-3 border border-green-300">Project Title</th>
-                <th className="px-4 py-3 border border-green-300">Year</th>
-                <th className="px-4 py-3 border border-green-300">Sponsoring Agency</th>
-                <th className="px-4 py-3 border border-green-300">Funding (₹)</th>
-              </tr>
-            </thead>
-            <tbody>
-              {completedProjects.map((project, index) => (
-                <tr key={index} className="bg-green-50 even:bg-white hover:bg-green-100">
-                  <td className="px-4 py-3 border border-green-300 text-center">{index + 1}</td>
-                  <td className="px-4 py-3 border border-green-300">{project.faculty}</td>
-                  <td className="px-4 py-3 border border-green-300">{project.title}</td>
-                  <td className="px-4 py-3 border border-green-300 text-center">{project.year}</td>
-                  <td className="px-4 py-3 border border-green-300">{project.agency}</td>
-                  <td className="px-4 py-3 border border-green-300 text-right pr-4">{project.amount}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
+  <h2 className="text-3xl font-semibold pb-3 text-orange-600">
+    Completed Projects
+  </h2>
+  <div className="overflow-x-auto">
+    <table className="w-full border-collapse border border-orange-300">
+      <thead className="bg-orange-600 text-white">
+        <tr>
+          <th className="px-4 py-3 border border-orange-300">Sr. No</th>
+          <th className="px-4 py-3 border border-orange-300">Faculty</th>
+          <th className="px-4 py-3 border border-orange-300">Project Title</th>
+          <th className="px-4 py-3 border border-orange-300">Year</th>
+          <th className="px-4 py-3 border border-orange-300">Sponsoring Agency</th>
+          <th className="px-4 py-3 border border-orange-300">Funding (₹)</th>
+        </tr>
+      </thead>
+      <tbody>
+        {completedProjects.map((project, index) => (
+          <tr key={index} className="bg-orange-50 even:bg-white hover:bg-orange-100">
+            <td className="px-4 py-3 border border-orange-300 text-center">{index + 1}</td>
+            <td className="px-4 py-3 border border-orange-300">{project.faculty}</td>
+            <td className="px-4 py-3 border border-orange-300">{project.title}</td>
+            <td className="px-4 py-3 border border-orange-300 text-center">{project.year}</td>
+            <td className="px-4 py-3 border border-orange-300">{project.agency}</td>
+            <td className="px-4 py-3 border border-orange-300 text-right pr-4">{project.amount}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</section>
 
-      {/* Consultancy Projects */}
-      <section className="mt-10 mb-16">
-        <h2 className="text-3xl font-semibold pb-3 text-purple-600">
-          Consultancy Projects
-        </h2>
-        <div className="overflow-x-auto">
-          <table className="w-full border-collapse border border-purple-300">
-            <thead className="bg-purple-600 text-white">
-              <tr>
-                <th className="px-4 py-3 border border-purple-300">Sr. No</th>
-                <th className="px-4 py-3 border border-purple-300">Faculty</th>
-                <th className="px-4 py-3 border border-purple-300">Project Title</th>
-                <th className="px-4 py-3 border border-purple-300">Year</th>
-                <th className="px-4 py-3 border border-purple-300">Sponsoring Agency</th>
-                <th className="px-4 py-3 border border-purple-300">Funding (₹)</th>
-              </tr>
-            </thead>
-            <tbody>
-              {consultancyProjects.map((project, index) => (
-                <tr key={index} className="bg-purple-50 even:bg-white hover:bg-purple-100">
-                  <td className="px-4 py-3 border border-purple-300 text-center">{index + 1}</td>
-                  <td className="px-4 py-3 border border-purple-300">{project.faculty}</td>
-                  <td className="px-4 py-3 border border-purple-300">{project.title}</td>
-                  <td className="px-4 py-3 border border-purple-300 text-center">{project.year}</td>
-                  <td className="px-4 py-3 border border-purple-300">{project.agency}</td>
-                  <td className="px-4 py-3 border border-purple-300 text-right pr-4">{project.amount}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
+{/* Consultancy Projects */}
+<section className="mt-10 mb-16">
+  <h2 className="text-3xl font-semibold pb-3 text-orange-600">
+    Consultancy Projects
+  </h2>
+  <div className="overflow-x-auto">
+    <table className="w-full border-collapse border border-orange-300">
+      <thead className="bg-orange-600 text-white">
+        <tr>
+          <th className="px-4 py-3 border border-orange-300">Sr. No</th>
+          <th className="px-4 py-3 border border-orange-300">Faculty</th>
+          <th className="px-4 py-3 border border-orange-300">Project Title</th>
+          <th className="px-4 py-3 border border-orange-300">Year</th>
+          <th className="px-4 py-3 border border-orange-300">Sponsoring Agency</th>
+          <th className="px-4 py-3 border border-orange-300">Funding (₹)</th>
+        </tr>
+      </thead>
+      <tbody>
+        {consultancyProjects.map((project, index) => (
+          <tr key={index} className="bg-orange-50 even:bg-white hover:bg-orange-100">
+            <td className="px-4 py-3 border border-orange-300 text-center">{index + 1}</td>
+            <td className="px-4 py-3 border border-orange-300">{project.faculty}</td>
+            <td className="px-4 py-3 border border-orange-300">{project.title}</td>
+            <td className="px-4 py-3 border border-orange-300 text-center">{project.year}</td>
+            <td className="px-4 py-3 border border-orange-300">{project.agency}</td>
+            <td className="px-4 py-3 border border-orange-300 text-right pr-4">{project.amount}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</section>
     </div>
   );
 };

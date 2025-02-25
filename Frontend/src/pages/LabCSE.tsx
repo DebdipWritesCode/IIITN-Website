@@ -37,7 +37,7 @@ const hardwareList = [
 const Laboratory = () => {
   return (
     <div className="pt-24 px-10 font-montserrat mb-16">
-      <h1 className="text-5xl font-semibold pb-6 text-center text-orange-800 hover:text-blue-900 transition-colors duration-300">
+      <h1 className="text-5xl font-semibold pb-6 text-center text-orange-800 hover:text-orange-900 transition-colors duration-300">
         Laboratory
       </h1>
       <p className="text-center text-lg text-gray-600 mb-6 hover:text-gray-700 transition-colors duration-300">
@@ -48,8 +48,8 @@ const Laboratory = () => {
       </p>
 
       {/* Laboratory Names Section */}
-      <div className="mb-12 p-6 bg-blue-50 rounded-2xl shadow-md border border-blue-200 hover:shadow-lg hover:border-blue-300 transition-all duration-300">
-        <h2 className="text-3xl font-semibold text-blue-800 mb-4 text-center hover:text-blue-900 transition-colors duration-300">
+      <div className="mb-12 p-6 bg-orange-50 rounded-2xl shadow-md border border-orange-200 hover:shadow-lg hover:border-orange-300 transition-all duration-300">
+        <h2 className="text-3xl font-semibold text-orange-800 mb-4 text-center hover:text-orange-900 transition-colors duration-300">
           Laboratory Names
         </h2>
         <ul className="list-disc list-inside text-gray-600">
@@ -62,8 +62,8 @@ const Laboratory = () => {
       </div>
 
       {/* Software Section */}
-      <div className="mb-12 p-6 bg-blue-50 rounded-2xl shadow-md border border-blue-200 hover:shadow-lg hover:border-blue-300 transition-all duration-300">
-        <h2 className="text-3xl font-semibold text-blue-800 mb-4 text-center hover:text-blue-900 transition-colors duration-300">
+      <div className="mb-12 p-6 bg-orange-50 rounded-2xl shadow-md border border-orange-200 hover:shadow-lg hover:border-orange-300 transition-all duration-300">
+        <h2 className="text-3xl font-semibold text-orange-800 mb-4 text-center hover:text-orange-900 transition-colors duration-300">
           Software
         </h2>
         <ul className="list-disc list-inside text-gray-600">
@@ -76,8 +76,8 @@ const Laboratory = () => {
       </div>
 
       {/* Hardware Section */}
-      <div className="mb-12 p-6 bg-blue-50 rounded-2xl shadow-md border border-blue-200 hover:shadow-lg hover:border-blue-300 transition-all duration-300">
-        <h2 className="text-3xl font-semibold text-blue-800 mb-4 text-center hover:text-blue-900 transition-colors duration-300">
+      <div className="mb-12 p-6 bg-orange-50 rounded-2xl shadow-md border border-orange-200 hover:shadow-lg hover:border-orange-300 transition-all duration-300">
+        <h2 className="text-3xl font-semibold text-orange-800 mb-4 text-center hover:text-orange-900 transition-colors duration-300">
           Hardware
         </h2>
         <ul className="list-disc list-inside text-gray-600">
@@ -93,4 +93,3 @@ const Laboratory = () => {
 };
 
 export default Laboratory;
-  
