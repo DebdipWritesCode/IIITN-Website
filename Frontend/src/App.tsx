@@ -42,15 +42,11 @@ const AAbout = lazy(() => import("./pages/AAbout"));
 const Mhai = lazy(() => import("./pages/Mhai"));
 const ForCompanies = lazy(() => import("./pages/for_companies"));
 const ManageNotices = lazy(() => import("./pages/ManageNotices"));
-<<<<<<< HEAD
 const Research_BS = lazy(() => import("./pages/Research_BS"));
 const Research_CSE = lazy(() => import("./pages/Research_CSE"));
 const Research_ECE = lazy(() => import("./pages/Research_ECE"));
-const WhyRecruitIIITN = lazy(() => import("./pages/whyrecruit")); // Added "Why Recruit" page
-=======
-const Bos_Research = lazy(() => import("./pages/Researchbos"));
+const Overview_PhD = lazy(() => import("./pages/Overview_PhD"));
 const WhyRecruitIIITN = lazy(() => import("./pages/whyrecruit"));
->>>>>>> c314dfb1aa8d956b7490b44d384274241913d5d9
 const Director = lazy(() => import("./pages/director"));
 const Registrar = lazy(() => import("./pages/registrar"));
 const Chairman = lazy(() => import("./pages/chairman"));
@@ -59,12 +55,13 @@ const BuildingWorksCommittee = lazy(() => import("./pages/buildingworkscommitee"
 const Senate = lazy(() => import("./pages/senate"));
 const Finance = lazy(() => import("./pages/finance"));
 const Board = lazy(() => import("./pages/board"));
-<<<<<<< HEAD
-const Overview_PhD = lazy(() => import("./pages/Overview_PhD"));
-const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics")); // Added "Why Recruit" page
-=======
+const Features_PhD = lazy(() => import("./pages/Features_PhD"));
+const RA_PhD = lazy(() => import("./pages/RA_PhD"));
+const OD_PhD = lazy(() => import("./pages/OD_PhD"));
+const IP_PhD = lazy(() => import("./pages/IP_PhD"));
+const Check_PhD = lazy(() => import("./pages/Check_PhD"));
+const Contact_PhD = lazy(() => import("./pages/Contact_PhD"));
 const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics"));
->>>>>>> c314dfb1aa8d956b7490b44d384274241913d5d9
 
 interface LayoutProps {
   children: ReactNode;
@@ -139,6 +136,12 @@ const App: React.FC = () => {
           <Route path="/ece/research" element={<Layout><Research_ECE /></Layout>} />
           <Route path="/cse/research" element={<Layout><Research_CSE /></Layout>} />
           <Route path="/phd/overview" element={<Layout><Overview_PhD /></Layout>} />
+          <Route path="/phd/features" element={<Layout><Features_PhD /></Layout>} />
+          <Route path="/phd/research-areas" element={<Layout><RA_PhD /></Layout>} />
+          <Route path="/phd/operational-details" element={<Layout><OD_PhD /></Layout>} />
+          <Route path="/phd/proformas" element={<Layout><IP_PhD /></Layout>} />
+          <Route path="/phd/checklists" element={<Layout><Check_PhD /></Layout>} />
+          <Route path="/phd/contact" element={<Layout><Contact_PhD /></Layout>} />
           {/* Added new route */}
         </Routes>
       </Suspense>
