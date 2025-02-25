@@ -55,6 +55,12 @@ const Senate = lazy(() => import("./pages/senate"));
 const Finance = lazy(() => import("./pages/finance"));
 const Board = lazy(() => import("./pages/board"))
 const Overview_PhD = lazy(() => import("./pages/Overview_PhD"));
+const Features_PhD = lazy(() => import("./pages/Features_PhD"));
+const RA_PhD = lazy(() => import("./pages/RA_PhD"));
+const OD_PhD = lazy(() => import("./pages/OD_PhD"));
+const IP_PhD = lazy(() => import("./pages/IP_PhD"));
+const Check_PhD = lazy(() => import("./pages/Check_PhD"));
+const Contact_PhD = lazy(() => import("./pages/Contact_PhD"));
 const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics"));
 const ProjectsCSE = lazy(() => import("./pages/ProjectsCSE"));
 const ProjectsECE = lazy(() => import("./pages/ProjectsECE"));
@@ -137,6 +143,12 @@ const App: React.FC = () => {
           <Route path="/ece/research" element={<Layout><Research_ECE /></Layout>} />
           <Route path="/cse/research" element={<Layout><Research_CSE /></Layout>} />
           <Route path="/phd/overview" element={<Layout><Overview_PhD /></Layout>} />
+          <Route path="/phd/features" element={<Layout><Features_PhD /></Layout>} />
+          <Route path="/phd/research-areas" element={<Layout><RA_PhD /></Layout>} />
+          <Route path="/phd/operational-details" element={<Layout><OD_PhD /></Layout>} />
+          <Route path="/phd/proformas" element={<Layout><IP_PhD /></Layout>} />
+          <Route path="/phd/checklists" element={<Layout><Check_PhD /></Layout>} />
+          <Route path="/phd/contact" element={<Layout><Contact_PhD /></Layout>} />
           <Route path="/cse/projects" element={<Layout><ProjectsCSE /></Layout>} />
           <Route path="/ece/projects" element={<Layout><ProjectsECE /></Layout>} />
           <Route path="/basic-sciences/projects" element={<Layout><ProjectsBS /></Layout>} />
