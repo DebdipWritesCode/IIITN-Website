@@ -46,8 +46,7 @@ const Research_BS = lazy(() => import("./pages/Research_BS"));
 const Research_CSE = lazy(() => import("./pages/Research_CSE"));
 const Research_ECE = lazy(() => import("./pages/Research_ECE"));
 const WhyRecruitIIITN = lazy(() => import("./pages/whyrecruit")); // Added "Why Recruit" page
-const Bos_Research = lazy(() => import("./pages/Researchbos"));
-const WhyRecruitIIITN = lazy(() => import("./pages/whyrecruit"));
+const Bos_Research = lazy(() => import("./pages/Research_BS"));
 const Director = lazy(() => import("./pages/director"));
 const Registrar = lazy(() => import("./pages/registrar"));
 const Chairman = lazy(() => import("./pages/chairman"));
@@ -57,8 +56,10 @@ const Senate = lazy(() => import("./pages/senate"));
 const Finance = lazy(() => import("./pages/finance"));
 const Board = lazy(() => import("./pages/board"))
 const Overview_PhD = lazy(() => import("./pages/Overview_PhD"));
-const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics")); // Added "Why Recruit" pag
-const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics"));
+const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics")); // Added "Why Recruit" pa
+const Btech = lazy(() => import("./pages/btech"));
+const Phd = lazy(() => import("./pages/phd"));
+const Report = lazy(() => import("./pages/report"));
 
 interface LayoutProps {
   children: ReactNode;
@@ -129,16 +130,14 @@ const App: React.FC = () => {
           <Route path="/placements/why-recruit" element={<Layout><WhyRecruitIIITN /></Layout>} />
           <Route path="placements/statistics" element={<Layout><PlacementStatistics /></Layout>} /> {/* Added new route */}
           <Route path="/admin/manage-notices" element={<ManageNotices />} />
-<<<<<<< HEAD
-          <Route path="/basic-sciences/research" element={<Layout><Bos_Research /></Layout>} /> {/* Added new route */}
-          <Route path="/basic-sciences/faculty" element={<Layout><Faculty_BS /></Layout>} />
-=======
+          <Route path="/basic-sciences/research" element={<Layout><Bos_Research /></Layout>} /> {/* Added new route */}/
           <Route path="/basic-sciences/research" element={<Layout><Research_BS /></Layout>} />
           <Route path="/ece/research" element={<Layout><Research_ECE /></Layout>} />
           <Route path="/cse/research" element={<Layout><Research_CSE /></Layout>} />
           <Route path="/phd/overview" element={<Layout><Overview_PhD /></Layout>} />
-          {/* Added new route */}
->>>>>>> 55f014f1ae4c9e4f10ad0c56183454df3eb3153f
+          <Route path="/programs/btech" element={<Layout><Btech /></Layout>} />
+          <Route path="/programs/phd" element={<Layout><Phd /></Layout>} />
+          <Route path="/programs/reports" element={<Layout><Report /></Layout>} />
         </Routes>
       </Suspense>
     </div>
