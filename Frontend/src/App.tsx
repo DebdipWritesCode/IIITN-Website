@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-// Lazy load page components for better performance
 const Home = lazy(() => import("./pages/Home"));
 const Academics = lazy(() => import("./pages/Academics"));
 const Governance = lazy(() => import("./pages/Governance"));
@@ -43,8 +42,8 @@ const AAbout = lazy(() => import("./pages/AAbout"));
 const Mhai = lazy(() => import("./pages/Mhai"));
 const ForCompanies = lazy(() => import("./pages/for_companies"));
 const ManageNotices = lazy(() => import("./pages/ManageNotices"));
-const Bos_Research = lazy(() => import("./pages/Researchbos"));// Added "Why Recruit" page
-const WhyRecruitIIITN = lazy(() => import("./pages/whyrecruit")); // Added "Why Recruit" page
+const Bos_Research = lazy(() => import("./pages/Researchbos"));
+const WhyRecruitIIITN = lazy(() => import("./pages/whyrecruit"));
 const Director = lazy(() => import("./pages/director"));
 const Registrar = lazy(() => import("./pages/registrar"));
 const Chairman = lazy(() => import("./pages/chairman"));
@@ -56,7 +55,6 @@ const Board = lazy(() => import("./pages/board"));
 const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics"));
 const Faculty_BS = lazy(() => import("./pages/faculty_bos")); 
 
-// Layout wrapper for consistent UI
 interface LayoutProps {
   children: ReactNode;
 }
@@ -64,7 +62,7 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => (
   <>
     <Navbar />
-    <div className="pt-20">{children}</div> {/* Ensures content is below the fixed navbar */}
+    <div className="pt-30">{children}</div>
     <Footer />
   </>
 );
