@@ -39,24 +39,24 @@ const projects = [
           The department is actively involved in research and modernization projects funded by various agencies.
         </p>
         <div className="overflow-x-auto">
-          <table className="w-full border-collapse border border-blue-300">
-            <thead className="bg-blue-600 text-white">
+          <table className="w-full border-collapse border border-orange-300">
+            <thead className="bg-orange-600 text-white">
               <tr>
-                <th className="px-4 py-3 border border-blue-300">Sr. No</th>
-                <th className="px-4 py-3 border border-blue-300">Faculty</th>
-                <th className="px-4 py-3 border border-blue-300">Project Title</th>
-                <th className="px-4 py-3 border border-blue-300">Funding Agency</th>
-                <th className="px-4 py-3 border border-blue-300">Funding (₹)</th>
+                <th className="px-4 py-3 border border-orange-300">Sr. No</th>
+                <th className="px-4 py-3 border border-orange-300">Faculty</th>
+                <th className="px-4 py-3 border border-orange-300">Project Title</th>
+                <th className="px-4 py-3 border border-orange-300">Funding Agency</th>
+                <th className="px-4 py-3 border border-orange-300">Funding (₹)</th>
               </tr>
             </thead>
             <tbody>
               {projects.map((project, index) => (
-                <tr key={index} className="bg-blue-50 even:bg-white hover:bg-blue-100">
-                  <td className="px-4 py-3 border border-blue-300 text-center">{index + 1}</td>
-                  <td className="px-4 py-3 border border-blue-300">{project.faculty}</td>
-                  <td className="px-4 py-3 border border-blue-300">{project.title}</td>
-                  <td className="px-4 py-3 border border-blue-300">{project.agency}</td>
-                  <td className="px-4 py-3 border border-blue-300 text-right pr-4">{project.amount}</td>
+                <tr key={index} className="bg-orange-50 even:bg-white hover:bg-orange-100">
+                  <td className="px-4 py-3 border border-orange-300 text-center">{index + 1}</td>
+                  <td className="px-4 py-3 border border-orange-300">{project.faculty}</td>
+                  <td className="px-4 py-3 border border-orange-300">{project.title}</td>
+                  <td className="px-4 py-3 border border-orange-300">{project.agency}</td>
+                  <td className="px-4 py-3 border border-orange-300 text-right pr-4">{project.amount}</td>
                 </tr>
               ))}
             </tbody>
@@ -67,5 +67,5 @@ const projects = [
   };
   
   export default Projects;
-  
+      
   
