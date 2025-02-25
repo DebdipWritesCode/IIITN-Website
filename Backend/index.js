@@ -13,6 +13,7 @@ const url = process.env.MONGODB_URI;
 
 const userRoutes = require('./routes/user');
 const noticeRoutes = require('./routes/notice');
+const searchRoutes = require('./routes/search');
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -21,6 +22,7 @@ app.use('/images', express.static(path.join(__dirname, 'public', 'images')));
 
 app.use('/user', userRoutes);
 app.use('/notice', noticeRoutes);
+app.use('/search', searchRoutes);
 
 mongoose.connect(url)
     .then(() => {

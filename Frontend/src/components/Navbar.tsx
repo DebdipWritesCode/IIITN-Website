@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { navbar, subNavbar } from "../data/data";
-import { FaSearch } from "react-icons/fa";
 import EnglishSVG from "../assets/hl.svg";
 import Azadi from "../assets/Azadi.png";
 import Desh from "../assets/Desh.jpg";
@@ -8,6 +7,7 @@ import HindiSVG from "../assets/hindi.svg";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import SpecialSubNavbar from "./SpecialSubNavbar";
+import SearchBar from "./SearchBar";
 
 const Navbar = () => {
   const headerImages = [EnglishSVG, HindiSVG];
@@ -33,7 +33,10 @@ const Navbar = () => {
             ) : null
           )}
         </div>
-        <div className="flex gap-10 items-center">
+        <div className="flex gap-6 items-center">
+          <div className="relative">
+            <SearchBar  />
+          </div>
           {navbar.map((item, index) =>
             index >= 3 ? (
               <Link key={item.id} to={item.url}>
@@ -41,7 +44,6 @@ const Navbar = () => {
               </Link>
             ) : null
           )}
-          <FaSearch size={22} className="mr-3" />
         </div>
       </div>
 
@@ -54,7 +56,6 @@ const Navbar = () => {
                   key={item.id}
                   className="relative"
                   onMouseEnter={() => setHoveredItem(item.id)}
-                  // onMouseLeave={() => setHoveredItem(null)}
                 >
                   <Link to={item.url} className="hover:text-orange-600 cursor-pointer">
                     {item.name}
@@ -62,9 +63,7 @@ const Navbar = () => {
 
                   {hoveredItem === item.id &&
                     (item.name === "Academics" ? (
-                      <SpecialSubNavbar
-                        data={{ ...item, setHoveredItem }}
-                      />
+                      <SpecialSubNavbar data={{ ...item, setHoveredItem }} />
                     ) : (
                       item.subLinks && (
                         <div

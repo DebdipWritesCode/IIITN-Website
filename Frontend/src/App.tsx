@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-// Lazy load page components for better performance
 const Home = lazy(() => import("./pages/Home"));
 const Academics = lazy(() => import("./pages/Academics"));
 const Governance = lazy(() => import("./pages/Governance"));
@@ -43,8 +42,12 @@ const AAbout = lazy(() => import("./pages/AAbout"));
 const Mhai = lazy(() => import("./pages/Mhai"));
 const ForCompanies = lazy(() => import("./pages/for_companies"));
 const ManageNotices = lazy(() => import("./pages/ManageNotices"));
-const Bos_Research = lazy(() => import("./pages/Researchbos"));// Added "Why Recruit" page
+const Research_BS = lazy(() => import("./pages/Research_BS"));
+const Research_CSE = lazy(() => import("./pages/Research_CSE"));
+const Research_ECE = lazy(() => import("./pages/Research_ECE"));
 const WhyRecruitIIITN = lazy(() => import("./pages/whyrecruit")); // Added "Why Recruit" page
+const Bos_Research = lazy(() => import("./pages/Researchbos"));
+const WhyRecruitIIITN = lazy(() => import("./pages/whyrecruit"));
 const Director = lazy(() => import("./pages/director"));
 const Registrar = lazy(() => import("./pages/registrar"));
 const Chairman = lazy(() => import("./pages/chairman"));
@@ -52,17 +55,11 @@ const Staff = lazy(() => import("./pages/staff"));
 const BuildingWorksCommittee = lazy(() => import("./pages/buildingworkscommitee"));
 const Senate = lazy(() => import("./pages/senate"));
 const Finance = lazy(() => import("./pages/finance"));
-const Board = lazy(() => import("./pages/board"));
-const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics")); // Added "Why Recruit" page
-const FacultyCSE = lazy(() => import("./pages/FacultyCSE")); 
-const ProjectsCSE = lazy(() => import("./pages/ProjectsCSE")); 
-const ProjectsECE = lazy(() => import("./pages/ProjectsECE")); 
-const ProjectsBS = lazy(() => import("./pages/ProjectsBS")); 
-const LabCSE = lazy(() => import("./pages/LabCSE")); 
+const Board = lazy(() => import("./pages/board"))
+const Overview_PhD = lazy(() => import("./pages/Overview_PhD"));
+const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics")); // Added "Why Recruit" pag
+const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics"));
 
-
-
-// Layout wrapper for consistent UI
 interface LayoutProps {
   children: ReactNode;
 }
@@ -70,7 +67,7 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => (
   <>
     <Navbar />
-    <div className="pt-20">{children}</div> {/* Ensures content is below the fixed navbar */}
+    <div className="pt-30">{children}</div>
     <Footer />
   </>
 );
@@ -113,7 +110,7 @@ const App: React.FC = () => {
           <Route path="/alumni/members" element={<Layout><Members /></Layout>} />
           <Route path="/alumni/about-us" element={<Layout><AlumniAboutUs /></Layout>} />
           <Route path="/about" element={<Layout><AAbout /></Layout>} />
-           <Route path="/ai-for-maharashtra" element={<Layout><Mhai /></Layout>} />
+          <Route path="/ai-for-maharashtra" element={<Layout><Mhai /></Layout>} />
           <Route path="/placements/contact" element={<Layout><TnPCell /></Layout>} /> {/* Added Route for TnP Cell */}
           <Route path="*" element={<NotFound />} /> {/* Handles all undefined routes */}
           <Route path="/placements/contact" element={<Layout><TnPCell /></Layout>} />
@@ -129,15 +126,16 @@ const App: React.FC = () => {
           <Route path="/governance/senate" element={<Layout><Senate /></Layout>} />
           <Route path="/governance/finance-committee" element={<Layout><Finance /></Layout>} />
           <Route path="/governance/board-of-governors" element={<Layout><Board /></Layout>} />
-          <Route path="/placements/why-recruit" element={<Layout><WhyRecruitIIITN /></Layout>} /> 
+          <Route path="/placements/why-recruit" element={<Layout><WhyRecruitIIITN /></Layout>} />
           <Route path="placements/statistics" element={<Layout><PlacementStatistics /></Layout>} /> {/* Added new route */}
           <Route path="/admin/manage-notices" element={<ManageNotices />} />
+
           <Route path="/basic-sciences/research" element={<Layout><Bos_Research /></Layout>} /> {/* Added new route */}
-          <Route path="/cse/faculty" element={<Layout><FacultyCSE /></Layout>} /> {/* Added new route */}
-          <Route path="/cse/projects" element={<Layout><ProjectsCSE /></Layout>} /> {/* Added new route */}
-          <Route path="/ece/projects" element={<Layout><ProjectsECE /></Layout>} /> {/* Added new route */}
-          <Route path="/basic-sciences/projects" element={<Layout><ProjectsBS /></Layout>} /> {/* Added new route */}
-          <Route path="/cse/laboratory" element={<Layout><LabCSE /></Layout>} /> {/* Added new route */}
+          <Route path="/basic-sciences/faculty" element={<Layout><Faculty_BS /></Layout>} />
+          <Route path="/basic-sciences/research" element={<Layout><Research_BS /></Layout>} />
+          <Route path="/ece/research" element={<Layout><Research_ECE /></Layout>} />
+          <Route path="/cse/research" element={<Layout><Research_CSE /></Layout>} />
+          <Route path="/phd/overview" element={<Layout><Overview_PhD /></Layout>} />
         </Routes>
       </Suspense>
     </div>
