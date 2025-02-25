@@ -45,7 +45,6 @@ const ManageNotices = lazy(() => import("./pages/ManageNotices"));
 const Research_BS = lazy(() => import("./pages/Research_BS"));
 const Research_CSE = lazy(() => import("./pages/Research_CSE"));
 const Research_ECE = lazy(() => import("./pages/Research_ECE"));
-const Bos_Research = lazy(() => import("./pages/Researchbos"));
 const WhyRecruitIIITN = lazy(() => import("./pages/whyrecruit"));
 const Director = lazy(() => import("./pages/director"));
 const Registrar = lazy(() => import("./pages/registrar"));
@@ -56,7 +55,12 @@ const Senate = lazy(() => import("./pages/senate"));
 const Finance = lazy(() => import("./pages/finance"));
 const Board = lazy(() => import("./pages/board"))
 const Overview_PhD = lazy(() => import("./pages/Overview_PhD"));
-const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics")); // Added "Why Recruit" pag
+const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics"));
+const ProjectsCSE = lazy(() => import("./pages/ProjectsCSE"));
+const ProjectsECE = lazy(() => import("./pages/ProjectsECE"));
+const ProjectsBS = lazy(() => import("./pages/ProjectsBS"));
+const LabCSE = lazy(() => import("./pages/LabCSE"));
+
 
 interface LayoutProps {
   children: ReactNode;
@@ -128,12 +132,15 @@ const App: React.FC = () => {
           <Route path="placements/statistics" element={<Layout><PlacementStatistics /></Layout>} /> {/* Added new route */}
           <Route path="/admin/manage-notices" element={<ManageNotices />} />
 
-          <Route path="/basic-sciences/research" element={<Layout><Bos_Research /></Layout>} /> {/* Added new route */}
-          <Route path="/basic-sciences/faculty" element={<Layout><Faculty_BS /></Layout>} />
+          <Route path="/basic-sciences/research" element={<Layout><Research_BS /></Layout>} /> {/* Added new route */}
           <Route path="/basic-sciences/research" element={<Layout><Research_BS /></Layout>} />
           <Route path="/ece/research" element={<Layout><Research_ECE /></Layout>} />
           <Route path="/cse/research" element={<Layout><Research_CSE /></Layout>} />
           <Route path="/phd/overview" element={<Layout><Overview_PhD /></Layout>} />
+          <Route path="/cse/projects" element={<Layout><ProjectsCSE /></Layout>} />
+          <Route path="/ece/projects" element={<Layout><ProjectsECE /></Layout>} />
+          <Route path="/basic-sciences/projects" element={<Layout><ProjectsBS /></Layout>} />
+          <Route path="/cse/laboratory" element={<Layout><LabCSE /></Layout>} />
         </Routes>
       </Suspense>
     </div>
