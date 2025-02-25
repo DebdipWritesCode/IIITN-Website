@@ -53,7 +53,8 @@ const BuildingWorksCommittee = lazy(() => import("./pages/buildingworkscommitee"
 const Senate = lazy(() => import("./pages/senate"));
 const Finance = lazy(() => import("./pages/finance"));
 const Board = lazy(() => import("./pages/board"));
-const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics")); // Added "Why Recruit" page
+const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics"));
+const Faculty_BS = lazy(() => import("./pages/faculty_bos")); 
 
 // Layout wrapper for consistent UI
 interface LayoutProps {
@@ -126,6 +127,7 @@ const App: React.FC = () => {
           <Route path="placements/statistics" element={<Layout><PlacementStatistics /></Layout>} /> {/* Added new route */}
           <Route path="/admin/manage-notices" element={<ManageNotices />} />
           <Route path="/basic-sciences/research" element={<Layout><Bos_Research /></Layout>} /> {/* Added new route */}
+          <Route path="/basic-sciences/faculty" element={<Layout><Faculty_BS /></Layout>} />
         </Routes>
       </Suspense>
     </div>
