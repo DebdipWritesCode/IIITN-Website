@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const dotenv = require('dotenv');
+const path = require('path');
 
 dotenv.config();
 
@@ -11,11 +12,15 @@ const PORT = 4000;
 const url = process.env.MONGODB_URI;
 
 const userRoutes = require('./routes/user');
-
-app.use('/user', userRoutes);
+const noticeRoutes = require('./routes/notice');
 
 app.use(cors());
 app.use(bodyParser.json());
+
+app.use('/images', express.static(path.join(__dirname, 'public', 'images')));
+
+app.use('/user', userRoutes);
+app.use('/notice', noticeRoutes);
 
 mongoose.connect(url)
     .then(() => {
@@ -28,3 +33,5 @@ mongoose.connect(url)
         console.error('MongoDB connection error:', err);
         process.exit(1);
     });
+
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
