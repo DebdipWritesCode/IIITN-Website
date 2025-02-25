@@ -10,7 +10,7 @@ const convocationData: ConvocationItem[] = [
   {
     title: "3rd Convocation - 2023",
     links: [
-      { name: "Watch on YouTube", icon: <FaYoutube />, url: "https://youtube.com/yourlink" },
+      { name: "Watch on YouTube", icon: <FaYoutube />, url: "https://www.youtube.com/watch?v=V3JdPVaihJE" },
       { name: "UCN News", icon: <FaNewspaper />, url: "#" },
       { name: "24 INDIA News", icon: <FaNewspaper />, url: "#" },
       { name: "MISSION INDIA News", icon: <FaNewspaper />, url: "#" },
@@ -20,7 +20,7 @@ const convocationData: ConvocationItem[] = [
   {
     title: "1st Convocation",
     links: [
-      { name: "Watch on YouTube", icon: <FaYoutube />, url: "https://youtube.com/yourlink" },
+      { name: "Watch on YouTube", icon: <FaYoutube />, url: "https://www.youtube.com/watch?v=RVm3iyBhlS8" },
       { name: "UCN News", icon: <FaNewspaper />, url: "#" },
       { name: "DD Sahyadri News", icon: <FaNewspaper />, url: "#" },
       { name: "Invitation", icon: <FaFilePdf />, url: "https://yourinvitationlink.com" },

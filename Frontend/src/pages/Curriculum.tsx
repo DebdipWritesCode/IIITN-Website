@@ -31,9 +31,9 @@ const Curriculum = () => {
 
                 <div className="border border-[#D35400] rounded-b-lg p-6 bg-white flex flex-col gap-4">
                     {[
-                        { text: "📅 Slot", link: "#" },
-                        { text: "🏫 Classroom Occupancy", link: "#" },
-                        { text: "🧪 Lab Occupancy", link: "#" },
+                        { text: "📅 Slot", link: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSp2JfZZCxiV3e3n3uKekiLFOeh2XQzDov_YDAU4QLRIGD5H6HCoWmQKORMAd8chLib0p-I0749s1Uj/pubhtml?gid=859088485&single=true&urp=gmail_link" },
+                        { text: "🏫 Classroom Occupancy", link: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSp2JfZZCxiV3e3n3uKekiLFOeh2XQzDov_YDAU4QLRIGD5H6HCoWmQKORMAd8chLib0p-I0749s1Uj/pubhtml?gid=371376379&single=true&urp=gmail_link" },
+                        { text: "🧪 Lab Occupancy", link: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSp2JfZZCxiV3e3n3uKekiLFOeh2XQzDov_YDAU4QLRIGD5H6HCoWmQKORMAd8chLib0p-I0749s1Uj/pubhtml?gid=349864037&single=true&urp=gmail_link" },
                     ].map((item, index) => (
                         <a
                             key={index}
