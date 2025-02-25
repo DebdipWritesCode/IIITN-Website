@@ -71,6 +71,7 @@ const LabBS = lazy(() => import("./pages/LabBS"));
 const Report = lazy(() => import("./pages/report"));
 const Btech = lazy(() => import("./pages/btech"));
 const Phd = lazy(() => import("./pages/phd"));
+const Curriculum = lazy(() => import("./pages/Curriculum"));
 
 
 interface LayoutProps {
@@ -163,6 +164,7 @@ const App: React.FC = () => {
           <Route path="/programs/reports" element={<Layout><Report /></Layout>} />
           <Route path="/programs/btech" element={<Layout><Btech /></Layout>} />
           <Route path="/programs/phd" element={<Layout><Phd /></Layout>} />
+          <Route path="/programs/curriculum" element={<Layout><Curriculum /></Layout>} />
         </Routes>
       </Suspense>
     </div>
