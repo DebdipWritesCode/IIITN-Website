@@ -43,7 +43,8 @@ const AAbout = lazy(() => import("./pages/AAbout"));
 const Mhai = lazy(() => import("./pages/Mhai"));
 const ForCompanies = lazy(() => import("./pages/for_companies"));
 const WhyRecruitIIITN = lazy(() => import("./pages/whyrecruit"));
-const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics")); // Added "Why Recruit" page
+const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics")); 
+const Bos_Research = lazy(() => import("./pages/Researchbos"));// Added "Why Recruit" page
 
 // Layout wrapper for consistent UI
 interface LayoutProps {
@@ -104,7 +105,8 @@ const App: React.FC = () => {
           <Route path="/placements/for-students" element={<Layout><ForStudents /></Layout>} />
           <Route path="/placements/for-companies" element={<Layout><ForCompanies /></Layout>} />
           <Route path="/placements/why-recruit" element={<Layout><WhyRecruitIIITN /></Layout>} /> 
-          <Route path="placements/statistics" element={<Layout><PlacementStatistics /></Layout>} /> {/* Added new route */}
+          <Route path="placements/statistics" element={<Layout><PlacementStatistics /></Layout>} />
+          <Route path="/basic-sciences/research" element={<Layout><Bos_Research /></Layout>} /> {/* Added new route */}
         </Routes>
       </Suspense>
     </div>
