@@ -29,7 +29,7 @@ const PGRule = lazy(() => import("./pages/PGRule"));
 const About_CSE = lazy(() => import("./pages/About_CSE"));
 const About_ECE = lazy(() => import("./pages/About_ECE"));
 const TnPCell = lazy(() => import("./pages/contact_t&p"));
-const About_BS = lazy(() => import("./pages/About_BS"));
+const About_BS = lazy(() => import("./pages/About_BS"));  
 const BOS_BS = lazy(() => import("./pages/BOS_BS"));
 const BOS_CSE = lazy(() => import("./pages/BOS_CSE"));
 const BOS_ECE = lazy(() => import("./pages/BOS_ECE"));
@@ -45,7 +45,6 @@ const ManageNotices = lazy(() => import("./pages/ManageNotices"));
 const Research_BS = lazy(() => import("./pages/Research_BS"));
 const Research_CSE = lazy(() => import("./pages/Research_CSE"));
 const Research_ECE = lazy(() => import("./pages/Research_ECE"));
-const WhyRecruitIIITN = lazy(() => import("./pages/whyrecruit")); // Added "Why Recruit" page
 const Bos_Research = lazy(() => import("./pages/Researchbos"));
 const WhyRecruitIIITN = lazy(() => import("./pages/whyrecruit"));
 const Director = lazy(() => import("./pages/director"));
@@ -58,7 +57,6 @@ const Finance = lazy(() => import("./pages/finance"));
 const Board = lazy(() => import("./pages/board"))
 const Overview_PhD = lazy(() => import("./pages/Overview_PhD"));
 const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics")); // Added "Why Recruit" pag
-const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics"));
 
 interface LayoutProps {
   children: ReactNode;
