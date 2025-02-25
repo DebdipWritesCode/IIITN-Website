@@ -1,8 +1,12 @@
 import One from "../assets/academics/1.png";
 import Two from "../assets/academics/2.png";
 import Three from "../assets/academics/3.png";
-import Director from "../assets/Director.jpg";
+import Cover from "../assets/academics/cover.jpg";
 import UG from "../assets/academics/UG.jpg";
+import Undergrad from "../assets/academics/undergrad.jpg"
+import Postgrad from "../assets/academics/postgrad.png"
+import Doctorate from "../assets/academics/doctorate.jpg"
+import Postgrad_Prog from "../assets/academics/postgraduate-program.jpg"
 
 const Academics = () => {
   return (
@@ -15,7 +19,7 @@ const Academics = () => {
         <div className="flex flex-col gap-6">
           <div className="flex p-4 rounded-lg gap-10">
             <img
-              src={Director}
+              src={Undergrad}
               alt="Undergraduate"
               className="w-32 h-full shadow-lg object-cover mr-4"
             />
@@ -36,7 +40,7 @@ const Academics = () => {
 
           <div className="flex p-4 rounded-lg gap-10">
             <img
-              src={Director}
+              src={Postgrad}
               alt="Postgraduate"
               className="w-32 h-full shadow-lg object-cover mr-4"
             />
@@ -57,7 +61,7 @@ const Academics = () => {
 
           <div className="flex p-4 rounded-lg gap-10">
             <img
-              src={Director}
+              src={Doctorate}
               alt="Doctorate"
               className="w-32 h-full shadow-lg object-cover mr-4"
             />
@@ -78,7 +82,7 @@ const Academics = () => {
 
         <div>
           <img
-            src={Director}
+            src={Cover}
             alt="Academics"
             className=" h-[750px] object-cover rounded-lg shadow-lg"
           />
@@ -115,14 +119,14 @@ const Academics = () => {
         <div className="bg-white shadow-lg p-6 rounded-lg text-center border-t-4 border-red-500">
           <img src={Two} alt="Lecture" className="mx-auto h-20 mb-4" />
           <h1 className="text-3xl mt-10 font-semibold text-red-600">
-            Skilled Lecture
+            Organised Lecture Plans
           </h1>
         </div>
 
         <div className="bg-white shadow-lg p-6 rounded-lg text-center border-t-4 border-blue-500">
           <img src={Three} alt="Library" className="mx-auto h-20 mb-4" />
           <h1 className="text-3xl mt-10 font-semibold text-blue-600">
-            Book Library
+            Student Library
           </h1>
         </div>
       </div>
@@ -177,7 +181,7 @@ const Academics = () => {
 
           <div className="md:w-1/2">
             <img
-              src="/postgrad.jpg"
+              src={Postgrad_Prog}
               alt="Postgraduate Courses"
               className="h-[400px] object-cover rounded-lg shadow-lg border border-orange-300"
             />

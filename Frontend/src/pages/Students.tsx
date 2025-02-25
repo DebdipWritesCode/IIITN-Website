@@ -1,4 +1,10 @@
 import { useState } from "react";
+import tech from "../assets/students/tech.jpg"
+import cultural from "../assets/students/cultural.jpg"
+import hackathon from "../assets/students/hackathon.jpg"
+import concert from "../assets/students/concert.jpg"
+
+
 import {
   FaRunning,
   FaPalette,
@@ -21,28 +27,28 @@ const eventsData: Event[] = [
     title: "Tech Fest",
     date: "29 March",
     category: "upcoming",
-    image: "/images/techfest.jpg",
+    image:tech,
   },
   {
     id: 2,
     title: "Cultural Night",
     date: "15 April",
     category: "upcoming",
-    image: "/images/cultural.jpg",
+    image: cultural,
   },
   {
     id: 3,
     title: "Hackathon",
     date: "5 Feb",
     category: "past",
-    image: "/images/hackathon.jpg",
+    image: hackathon,
   },
   {
     id: 4,
     title: "Music Concert",
     date: "22 Jan",
     category: "past",
-    image: "/images/concert.jpg",
+    image: concert,
   },
 ];
 
@@ -88,17 +94,17 @@ const Students = () => {
             {
               title: "Language Club",
               icon: <FaLanguage />,
-              color: "text-purple-500",
+              color: "text-orange-500",
             },
             {
               title: "Tech Clubs",
               icon: <FaMicrochip />,
-              color: "text-blue-500",
+              color: "text-orange-500",
             },
             {
               title: "Music & Performance",
               icon: <FaMusic />,
-              color: "text-indigo-500",
+              color: "text-orange-500",
             },
           ].map((activity, index) => (
             <div
@@ -118,7 +124,7 @@ const Students = () => {
 
       <div className="mt-20 text-center">
         <h2 className="text-4xl font-bold">
-          Events & <span className="text-blue-600">Celebrations</span>
+          Events & <span className="text-orange-600">Celebrations</span>
         </h2>
         <p className="mt-4 text-lg text-gray-600">
           Stay updated with the latest events and past celebrations.
@@ -145,7 +151,7 @@ const Students = () => {
           {filteredEvents.map((event) => (
             <div
               key={event.id}
-              className="bg-purple-800 text-white rounded-lg overflow-hidden shadow-lg w-80">
+              className="bg-orange-500 text-white rounded-lg overflow-hidden shadow-lg w-80">
               <img
                 src={event.image}
                 alt={event.title}
