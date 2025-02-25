@@ -2,6 +2,7 @@ import { ReactNode, Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import FacultyPage from "./pages/faculty_bos";
 
 const Home = lazy(() => import("./pages/Home"));
 const Academics = lazy(() => import("./pages/Academics"));
@@ -29,7 +30,7 @@ const PGRule = lazy(() => import("./pages/PGRule"));
 const About_CSE = lazy(() => import("./pages/About_CSE"));
 const About_ECE = lazy(() => import("./pages/About_ECE"));
 const TnPCell = lazy(() => import("./pages/contact_t&p"));
-const About_BS = lazy(() => import("./pages/About_BS"));
+const About_BS = lazy(() => import("./pages/About_BS"));  
 const BOS_BS = lazy(() => import("./pages/BOS_BS"));
 const BOS_CSE = lazy(() => import("./pages/BOS_CSE"));
 const BOS_ECE = lazy(() => import("./pages/BOS_ECE"));
@@ -45,8 +46,13 @@ const ManageNotices = lazy(() => import("./pages/ManageNotices"));
 const Research_BS = lazy(() => import("./pages/Research_BS"));
 const Research_CSE = lazy(() => import("./pages/Research_CSE"));
 const Research_ECE = lazy(() => import("./pages/Research_ECE"));
+<<<<<<< HEAD
 const WhyRecruitIIITN = lazy(() => import("./pages/whyrecruit")); // Added "Why Recruit" page
 const Bos_Research = lazy(() => import("./pages/Research_BS"));
+=======
+const Bos_Research = lazy(() => import("./pages/Researchbos"));
+const WhyRecruitIIITN = lazy(() => import("./pages/whyrecruit"));
+>>>>>>> e4a8f600437f4ada3700c7fd9d5bfc0950090a26
 const Director = lazy(() => import("./pages/director"));
 const Registrar = lazy(() => import("./pages/registrar"));
 const Chairman = lazy(() => import("./pages/chairman"));
@@ -56,10 +62,14 @@ const Senate = lazy(() => import("./pages/senate"));
 const Finance = lazy(() => import("./pages/finance"));
 const Board = lazy(() => import("./pages/board"))
 const Overview_PhD = lazy(() => import("./pages/Overview_PhD"));
+<<<<<<< HEAD
 const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics")); // Added "Why Recruit" pa
 const Btech = lazy(() => import("./pages/btech"));
 const Phd = lazy(() => import("./pages/phd"));
 const Report = lazy(() => import("./pages/report"));
+=======
+const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics")); // Added "Why Recruit" pag
+>>>>>>> e4a8f600437f4ada3700c7fd9d5bfc0950090a26
 
 interface LayoutProps {
   children: ReactNode;
@@ -131,6 +141,9 @@ const App: React.FC = () => {
           <Route path="placements/statistics" element={<Layout><PlacementStatistics /></Layout>} /> {/* Added new route */}
           <Route path="/admin/manage-notices" element={<ManageNotices />} />
           <Route path="/basic-sciences/research" element={<Layout><Bos_Research /></Layout>} /> {/* Added new route */}/
+
+          <Route path="/basic-sciences/research" element={<Layout><Bos_Research /></Layout>} /> {/* Added new route */}
+          <Route path="/basic-sciences/faculty" element={<Layout><FacultyPage /></Layout>} />
           <Route path="/basic-sciences/research" element={<Layout><Research_BS /></Layout>} />
           <Route path="/ece/research" element={<Layout><Research_ECE /></Layout>} />
           <Route path="/cse/research" element={<Layout><Research_CSE /></Layout>} />
