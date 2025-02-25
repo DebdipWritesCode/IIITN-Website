@@ -45,8 +45,7 @@ const ManageNotices = lazy(() => import("./pages/ManageNotices"));
 const Research_BS = lazy(() => import("./pages/Research_BS"));
 const Research_CSE = lazy(() => import("./pages/Research_CSE"));
 const Research_ECE = lazy(() => import("./pages/Research_ECE"));
-const WhyRecruitIIITN = lazy(() => import("./pages/whyrecruit")); // Added "Why Recruit" page
-const Bos_Research = lazy(() => import("./pages/Research_BS"));
+const WhyRecruitIIITN = lazy(() => import("./pages/whyrecruit"));
 const Director = lazy(() => import("./pages/director"));
 const Registrar = lazy(() => import("./pages/registrar"));
 const Chairman = lazy(() => import("./pages/chairman"));
@@ -56,11 +55,36 @@ const Senate = lazy(() => import("./pages/senate"));
 const Finance = lazy(() => import("./pages/finance"));
 const Board = lazy(() => import("./pages/board"))
 const Overview_PhD = lazy(() => import("./pages/Overview_PhD"));
-const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics")); // Added "Why Recruit" pa
+const Features_PhD = lazy(() => import("./pages/Features_PhD"));
+const RA_PhD = lazy(() => import("./pages/RA_PhD"));
+const OD_PhD = lazy(() => import("./pages/OD_PhD"));
+const IP_PhD = lazy(() => import("./pages/IP_PhD"));
+const Check_PhD = lazy(() => import("./pages/Check_PhD"));
+const Contact_PhD = lazy(() => import("./pages/Contact_PhD"));
+const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics"));
+const ProjectsCSE = lazy(() => import("./pages/ProjectsCSE"));
+const ProjectsECE = lazy(() => import("./pages/ProjectsECE"));
+const ProjectsBS = lazy(() => import("./pages/ProjectsBS"));
+const LabCSE = lazy(() => import("./pages/LabCSE"));
+const LabECE = lazy(() => import("./pages/LabECE"));
+const LabBS = lazy(() => import("./pages/LabBS"));
+const Report = lazy(() => import("./pages/report"));
 const Btech = lazy(() => import("./pages/btech"));
 const Phd = lazy(() => import("./pages/phd"));
+<<<<<<< HEAD
 const Report = lazy(() => import("./pages/report"));
 const Faculty_bos = lazy(() => import("./pages/faculty_bos"));
+=======
+const Login = lazy(() => import("./pages/Login"));
+const StudentLogin = lazy(() => import("./pages/StudentLogin"));
+const AdminLogin = lazy(() => import("./pages/AdminLogin"));
+const ManageEvents = lazy(() => import("./pages/ManageEvents"));
+
+const Curriculum = lazy(() => import("./pages/Curriculum"));
+const Cse_Events = lazy(() => import("./pages/events_cse"));
+const BS_Events = lazy(() => import("./pages/events_bs"));
+const ECE_Events = lazy(() => import("./pages/events_ece"));
+>>>>>>> 7ef0aab5fe49dc14aaa29930618240486be69f77
 
 interface LayoutProps {
   children: ReactNode;
@@ -131,15 +155,40 @@ const App: React.FC = () => {
           <Route path="/placements/why-recruit" element={<Layout><WhyRecruitIIITN /></Layout>} />
           <Route path="placements/statistics" element={<Layout><PlacementStatistics /></Layout>} /> {/* Added new route */}
           <Route path="/admin/manage-notices" element={<ManageNotices />} />
-          <Route path="/basic-sciences/research" element={<Layout><Bos_Research /></Layout>} /> {/* Added new route */}/
+
+          <Route path="/basic-sciences/research" element={<Layout><Research_BS /></Layout>} /> {/* Added new route */}
           <Route path="/basic-sciences/research" element={<Layout><Research_BS /></Layout>} />
           <Route path="/ece/research" element={<Layout><Research_ECE /></Layout>} />
           <Route path="/cse/research" element={<Layout><Research_CSE /></Layout>} />
           <Route path="/phd/overview" element={<Layout><Overview_PhD /></Layout>} />
+          <Route path="/phd/features" element={<Layout><Features_PhD /></Layout>} />
+          <Route path="/phd/research-areas" element={<Layout><RA_PhD /></Layout>} />
+          <Route path="/phd/operational-details" element={<Layout><OD_PhD /></Layout>} />
+          <Route path="/phd/proformas" element={<Layout><IP_PhD /></Layout>} />
+          <Route path="/phd/checklists" element={<Layout><Check_PhD /></Layout>} />
+          <Route path="/phd/contact" element={<Layout><Contact_PhD /></Layout>} />
+          <Route path="/cse/projects" element={<Layout><ProjectsCSE /></Layout>} />
+          <Route path="/ece/projects" element={<Layout><ProjectsECE /></Layout>} />
+          <Route path="/basic-sciences/projects" element={<Layout><ProjectsBS /></Layout>} />
+          <Route path="/cse/laboratory" element={<Layout><LabCSE /></Layout>} />
+          <Route path="/ece/laboratory" element={<Layout><LabECE /></Layout>} />
+          <Route path="/basic-sciences/laboratory" element={<Layout><LabBS /></Layout>} />
+          <Route path="/programs/reports" element={<Layout><Report /></Layout>} />
           <Route path="/programs/btech" element={<Layout><Btech /></Layout>} />
           <Route path="/programs/phd" element={<Layout><Phd /></Layout>} />
+<<<<<<< HEAD
           <Route path="/programs/reports" element={<Layout><Report /></Layout>} />
           <Route path="/basic-sciences/faculty" element={<Layout><Faculty_bos /></Layout>} />
+=======
+          <Route path="/login" element={<Login />} />
+          <Route path="/student-login" element={<StudentLogin />} />
+          <Route path="/admin-login" element={<AdminLogin />} />
+          <Route path="/admin/manage-events" element={<ManageEvents />} />
+          <Route path="/programs/curriculum" element={<Layout><Curriculum /></Layout>} />
+          <Route path="/cse/events" element={<Layout><Cse_Events /></Layout>} />
+          <Route path="/basic-sciences/events" element={<Layout><BS_Events /></Layout>} />
+          <Route path="/ece/events" element={<Layout><ECE_Events /></Layout>} />
+>>>>>>> 7ef0aab5fe49dc14aaa29930618240486be69f77
         </Routes>
       </Suspense>
     </div>
