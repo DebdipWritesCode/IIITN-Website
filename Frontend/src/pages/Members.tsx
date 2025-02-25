@@ -1,5 +1,3 @@
-import React from "react";
-
 const alumniData = [
     { name: "Rohit Agrawal", batch: "2016 - 2020", company: "Zolve Innovations Pvt Ltd" },
     { name: "Aman Soni", batch: "2016 - 2020", company: "SiteMinder" },
@@ -31,7 +29,7 @@ const Members = () => {
                 <h2 className="text-4xl font-bold text-orange-700 text-center mb-6">Our Esteemed Alumni</h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {alumniData.map((alumnus, index) => (
-                        <div key={index} className="bg-white shadow-lg rounded-xl p-6 text-center">
+                        <div key={index} className="bg-white shadow-lg rounded-xl p-6 text-center transition-transform duration-300 hover:scale-105 hover:shadow-xl">
                             <h3 className="text-2xl font-semibold text-gray-800">{alumnus.name}</h3>
                             <p className="text-lg text-gray-600">Batch: {alumnus.batch}</p>
                             <p className="text-lg font-semibold text-orange-600">Company: {alumnus.company}</p>
@@ -44,5 +42,4 @@ const Members = () => {
 };
 
 export default Members;
-
 

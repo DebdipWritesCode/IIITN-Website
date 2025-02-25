@@ -24,13 +24,13 @@ const Admissions = () => {
           </p>
         </div>
 
-        <div className="w-1/2">
-          <img
-            src="/path-to-your-image.jpg"
-            alt="IIIT Nagpur Auditorium"
-            className="w-full h-auto border-4 border-blue-500"
-          />
-        </div>
+        <div className="w-[744px] h-[425px] mx-auto">
+            <img
+                    src="src/assets/auditorium.JPG"
+                    alt="IIIT Nagpur Auditorium"
+                    className="w-full h-full border-4 border-blue-500 object-cover"
+                />
+            </div>
       </div>
 
       <h2 className=" font-bold text-center mb-20 text-4xl mt-20 ">
