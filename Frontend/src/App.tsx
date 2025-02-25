@@ -42,6 +42,10 @@ const AAbout = lazy(() => import("./pages/AAbout"));
 const Mhai = lazy(() => import("./pages/Mhai"));
 const ForCompanies = lazy(() => import("./pages/for_companies"));
 const ManageNotices = lazy(() => import("./pages/ManageNotices"));
+const Research_BS = lazy(() => import("./pages/Research_BS"));
+const Research_CSE = lazy(() => import("./pages/Research_CSE"));
+const Research_ECE = lazy(() => import("./pages/Research_ECE"));
+const WhyRecruitIIITN = lazy(() => import("./pages/whyrecruit")); // Added "Why Recruit" page
 const Bos_Research = lazy(() => import("./pages/Researchbos"));
 const WhyRecruitIIITN = lazy(() => import("./pages/whyrecruit"));
 const Director = lazy(() => import("./pages/director"));
@@ -52,8 +56,16 @@ const BuildingWorksCommittee = lazy(() => import("./pages/buildingworkscommitee"
 const Senate = lazy(() => import("./pages/senate"));
 const Finance = lazy(() => import("./pages/finance"));
 const Board = lazy(() => import("./pages/board"));
+<<<<<<< HEAD
+const Overview_PhD = lazy(() => import("./pages/Overview_PhD"));
+const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics")); // Added "Why Recruit" page
+=======
 const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics"));
+<<<<<<< HEAD
 const Faculty_BS = lazy(() => import("./pages/faculty_bos")); 
+=======
+>>>>>>> c314dfb1aa8d956b7490b44d384274241913d5d9
+>>>>>>> 55f014f1ae4c9e4f10ad0c56183454df3eb3153f
 
 interface LayoutProps {
   children: ReactNode;
@@ -105,7 +117,7 @@ const App: React.FC = () => {
           <Route path="/alumni/members" element={<Layout><Members /></Layout>} />
           <Route path="/alumni/about-us" element={<Layout><AlumniAboutUs /></Layout>} />
           <Route path="/about" element={<Layout><AAbout /></Layout>} />
-           <Route path="/ai-for-maharashtra" element={<Layout><Mhai /></Layout>} />
+          <Route path="/ai-for-maharashtra" element={<Layout><Mhai /></Layout>} />
           <Route path="/placements/contact" element={<Layout><TnPCell /></Layout>} /> {/* Added Route for TnP Cell */}
           <Route path="*" element={<NotFound />} /> {/* Handles all undefined routes */}
           <Route path="/placements/contact" element={<Layout><TnPCell /></Layout>} />
@@ -121,11 +133,19 @@ const App: React.FC = () => {
           <Route path="/governance/senate" element={<Layout><Senate /></Layout>} />
           <Route path="/governance/finance-committee" element={<Layout><Finance /></Layout>} />
           <Route path="/governance/board-of-governors" element={<Layout><Board /></Layout>} />
-          <Route path="/placements/why-recruit" element={<Layout><WhyRecruitIIITN /></Layout>} /> 
+          <Route path="/placements/why-recruit" element={<Layout><WhyRecruitIIITN /></Layout>} />
           <Route path="placements/statistics" element={<Layout><PlacementStatistics /></Layout>} /> {/* Added new route */}
           <Route path="/admin/manage-notices" element={<ManageNotices />} />
+<<<<<<< HEAD
           <Route path="/basic-sciences/research" element={<Layout><Bos_Research /></Layout>} /> {/* Added new route */}
           <Route path="/basic-sciences/faculty" element={<Layout><Faculty_BS /></Layout>} />
+=======
+          <Route path="/basic-sciences/research" element={<Layout><Research_BS /></Layout>} />
+          <Route path="/ece/research" element={<Layout><Research_ECE /></Layout>} />
+          <Route path="/cse/research" element={<Layout><Research_CSE /></Layout>} />
+          <Route path="/phd/overview" element={<Layout><Overview_PhD /></Layout>} />
+          {/* Added new route */}
+>>>>>>> 55f014f1ae4c9e4f10ad0c56183454df3eb3153f
         </Routes>
       </Suspense>
     </div>
