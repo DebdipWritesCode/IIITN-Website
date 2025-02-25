@@ -1,4 +1,5 @@
 import React from "react";
+import BasicScienceBos from "../assets/academics/BS.jpg"
 
 const BOS_BS: React.FC = () => {
     return (
@@ -12,7 +13,7 @@ const BOS_BS: React.FC = () => {
             <main className="max-w-5xl mx-auto py-16 px-6">
                 <section className="bg-white p-6 rounded-lg shadow-lg">
                     <img
-                        src="/path-to-bos-image.jpg"
+                        src={BasicScienceBos}
                         alt="Basic Sciences BOS"
                         className="w-full h-64 object-cover rounded-lg mb-6"
                     />
