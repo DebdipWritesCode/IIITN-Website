@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Modal from "react-modal";
 import { Link } from "react-router-dom";
 
 const VITE_BACKEND_URI = import.meta.env.VITE_BACKEND_URL;
@@ -25,8 +24,6 @@ const ManageNotices = () => {
   const [noticeType, setNoticeType] = useState("latest");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [selectedNoticeId, setSelectedNoticeId] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchNotices = async () => {
@@ -69,24 +66,12 @@ const ManageNotices = () => {
     setLoading(false);
   };
 
-  const openDeleteModal = (id: string) => {
-    setSelectedNoticeId(id);
-    setModalIsOpen(true);
-  };
-
-  const closeDeleteModal = () => {
-    setSelectedNoticeId(null);
-    setModalIsOpen(false);
-  };
-
-  const handleDeleteNotice = async () => {
-    if (!selectedNoticeId) return;
+  const handleDeleteNotice = async (id: string) => {
     setLoading(true);
     setError("");
     try {
-      await axios.delete(`${VITE_BACKEND_URI}/notice/${selectedNoticeId}`);
-      setNotices(notices.filter(notice => notice._id !== selectedNoticeId));
-      closeDeleteModal();
+      await axios.delete(`${VITE_BACKEND_URI}/notice/${id}`);
+      setNotices(notices.filter(notice => notice._id !== id));
     } catch (err) {
       setError("Failed to delete notice");
     }
@@ -95,7 +80,6 @@ const ManageNotices = () => {
 
   return (
     <div className="p-5 font-montserrat">
-      {/* Back to Home Button */}
       <div className="mb-4">
         <Link to="/" className="text-orange-600 font-semibold hover:underline">
           ← Back to Home
@@ -132,7 +116,7 @@ const ManageNotices = () => {
                   <h3 className="text-lg font-semibold">{notice.title}</h3>
                   <p className="text-gray-600">{notice.subTitle}</p>
                 </div>
-                <button onClick={() => openDeleteModal(notice._id)} className="bg-red-600 text-white px-3 py-1 rounded">
+                <button onClick={() => handleDeleteNotice(notice._id)} className="bg-red-600 text-white px-3 py-1 rounded">
                   Delete
                 </button>
               </li>
@@ -140,21 +124,6 @@ const ManageNotices = () => {
           </ul>
         )}
       </div>
-
-      <Modal isOpen={modalIsOpen} onRequestClose={closeDeleteModal} className="modal" overlayClassName="overlay">
-        <div className="p-5 bg-white rounded shadow-md text-center">
-          <h2 className="text-xl font-bold mb-4">Confirm Deletion</h2>
-          <p>Are you sure you want to delete this notice?</p>
-          <div className="mt-4 flex justify-center gap-4">
-            <button onClick={handleDeleteNotice} className="bg-red-600 text-white px-4 py-2 rounded">
-              Confirm
-            </button>
-            <button onClick={closeDeleteModal} className="bg-gray-400 text-white px-4 py-2 rounded">
-              Cancel
-            </button>
-          </div>
-        </div>
-      </Modal>
     </div>
   );
 };
