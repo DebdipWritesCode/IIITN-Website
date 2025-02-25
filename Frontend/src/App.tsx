@@ -29,7 +29,7 @@ const PGRule = lazy(() => import("./pages/PGRule"));
 const About_CSE = lazy(() => import("./pages/About_CSE"));
 const About_ECE = lazy(() => import("./pages/About_ECE"));
 const TnPCell = lazy(() => import("./pages/contact_t&p"));
-const About_BS = lazy(() => import("./pages/About_BS"));  
+const About_BS = lazy(() => import("./pages/About_BS"));
 const BOS_BS = lazy(() => import("./pages/BOS_BS"));
 const BOS_CSE = lazy(() => import("./pages/BOS_CSE"));
 const BOS_ECE = lazy(() => import("./pages/BOS_ECE"));
