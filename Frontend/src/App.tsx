@@ -54,6 +54,13 @@ const Senate = lazy(() => import("./pages/senate"));
 const Finance = lazy(() => import("./pages/finance"));
 const Board = lazy(() => import("./pages/board"));
 const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics")); // Added "Why Recruit" page
+const FacultyCSE = lazy(() => import("./pages/FacultyCSE")); 
+const ProjectsCSE = lazy(() => import("./pages/ProjectsCSE")); 
+const ProjectsECE = lazy(() => import("./pages/ProjectsECE")); 
+const ProjectsBS = lazy(() => import("./pages/ProjectsBS")); 
+const LabCSE = lazy(() => import("./pages/LabCSE")); 
+
+
 
 // Layout wrapper for consistent UI
 interface LayoutProps {
@@ -126,6 +133,11 @@ const App: React.FC = () => {
           <Route path="placements/statistics" element={<Layout><PlacementStatistics /></Layout>} /> {/* Added new route */}
           <Route path="/admin/manage-notices" element={<ManageNotices />} />
           <Route path="/basic-sciences/research" element={<Layout><Bos_Research /></Layout>} /> {/* Added new route */}
+          <Route path="/cse/faculty" element={<Layout><FacultyCSE /></Layout>} /> {/* Added new route */}
+          <Route path="/cse/projects" element={<Layout><ProjectsCSE /></Layout>} /> {/* Added new route */}
+          <Route path="/ece/projects" element={<Layout><ProjectsECE /></Layout>} /> {/* Added new route */}
+          <Route path="/basic-sciences/projects" element={<Layout><ProjectsBS /></Layout>} /> {/* Added new route */}
+          <Route path="/cse/laboratory" element={<Layout><LabCSE /></Layout>} /> {/* Added new route */}
         </Routes>
       </Suspense>
     </div>
