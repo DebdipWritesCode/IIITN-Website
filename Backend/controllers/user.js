@@ -8,8 +8,6 @@ const register = async (req, res) => {
       return res.status(400).json({ error: "Please fill all the fields" });
     }
 
-    const salt = await bcrypt.genSalt(10);
-    const hashedPassword = await bcrypt.hash(password, salt);
     const existingUser = await User.findOne({ email });
 
     if (existingUser) {
@@ -17,6 +15,9 @@ const register = async (req, res) => {
         .status(400)
         .json({ error: "An account with this email already exists" });
     }
+
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
 
     const user = new User({
       email,
@@ -26,11 +27,12 @@ const register = async (req, res) => {
 
     await user.save();
 
-    res.status(201).json({ message: "User registered successfully", user });
+    return res.status(201).json({ message: "User registered successfully", user });
 
-    res.status(201).json(user);
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    if (!res.headersSent) {
+      return res.status(500).json({ error: error.message });
+    }
   }
 };
 
@@ -53,9 +55,12 @@ const login = async (req, res) => {
       return res.status(400).json({ error: "Invalid password" });
     }
 
-    res.status(200).json({ message: "User logged in successfully", user });
+    return res.status(200).json({ message: "User logged in successfully", user });
+
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    if (!res.headersSent) {
+      return res.status(500).json({ error: error.message });
+    }
   }
 };
 

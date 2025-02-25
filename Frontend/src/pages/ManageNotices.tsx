@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Modal from "react-modal";
+import { Link } from "react-router-dom";
 
 const VITE_BACKEND_URI = import.meta.env.VITE_BACKEND_URL;
 
@@ -94,6 +95,13 @@ const ManageNotices = () => {
 
   return (
     <div className="p-5 font-montserrat">
+      {/* Back to Home Button */}
+      <div className="mb-4">
+        <Link to="/" className="text-orange-600 font-semibold hover:underline">
+          ← Back to Home
+        </Link>
+      </div>
+
       <h1 className="text-3xl font-bold mb-5">Manage Notices</h1>
       {error && <p className="text-red-600">{error}</p>}
       <div className="mb-5">

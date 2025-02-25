@@ -70,6 +70,9 @@ const Report = lazy(() => import("./pages/report"));
 const Btech = lazy(() => import("./pages/btech"));
 const Phd = lazy(() => import("./pages/phd"));
 const Login = lazy(() => import("./pages/Login"));
+const StudentLogin = lazy(() => import("./pages/StudentLogin"));
+const AdminLogin = lazy(() => import("./pages/AdminLogin"));
+const ManageEvents = lazy(() => import("./pages/ManageEvents"));
 
 
 interface LayoutProps {
@@ -161,6 +164,9 @@ const App: React.FC = () => {
           <Route path="/programs/btech" element={<Layout><Btech /></Layout>} />
           <Route path="/programs/phd" element={<Layout><Phd /></Layout>} />
           <Route path="/login" element={<Login />} />
+          <Route path="/student-login" element={<StudentLogin />} />
+          <Route path="/admin-login" element={<AdminLogin />} />
+          <Route path="/admin/manage-events" element={<ManageEvents />} />
         </Routes>
       </Suspense>
     </div>
