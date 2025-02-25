@@ -71,10 +71,7 @@ const LabBS = lazy(() => import("./pages/LabBS"));
 const Report = lazy(() => import("./pages/report"));
 const Btech = lazy(() => import("./pages/btech"));
 const Phd = lazy(() => import("./pages/phd"));
-<<<<<<< HEAD
-const Report = lazy(() => import("./pages/report"));
 const Faculty_bos = lazy(() => import("./pages/faculty_bos"));
-=======
 const Login = lazy(() => import("./pages/Login"));
 const StudentLogin = lazy(() => import("./pages/StudentLogin"));
 const AdminLogin = lazy(() => import("./pages/AdminLogin"));
@@ -84,7 +81,6 @@ const Curriculum = lazy(() => import("./pages/Curriculum"));
 const Cse_Events = lazy(() => import("./pages/events_cse"));
 const BS_Events = lazy(() => import("./pages/events_bs"));
 const ECE_Events = lazy(() => import("./pages/events_ece"));
->>>>>>> 7ef0aab5fe49dc14aaa29930618240486be69f77
 
 interface LayoutProps {
   children: ReactNode;
@@ -176,10 +172,8 @@ const App: React.FC = () => {
           <Route path="/programs/reports" element={<Layout><Report /></Layout>} />
           <Route path="/programs/btech" element={<Layout><Btech /></Layout>} />
           <Route path="/programs/phd" element={<Layout><Phd /></Layout>} />
-<<<<<<< HEAD
           <Route path="/programs/reports" element={<Layout><Report /></Layout>} />
           <Route path="/basic-sciences/faculty" element={<Layout><Faculty_bos /></Layout>} />
-=======
           <Route path="/login" element={<Login />} />
           <Route path="/student-login" element={<StudentLogin />} />
           <Route path="/admin-login" element={<AdminLogin />} />
@@ -188,7 +182,6 @@ const App: React.FC = () => {
           <Route path="/cse/events" element={<Layout><Cse_Events /></Layout>} />
           <Route path="/basic-sciences/events" element={<Layout><BS_Events /></Layout>} />
           <Route path="/ece/events" element={<Layout><ECE_Events /></Layout>} />
->>>>>>> 7ef0aab5fe49dc14aaa29930618240486be69f77
         </Routes>
       </Suspense>
     </div>
