@@ -60,6 +60,7 @@ const ProjectsCSE = lazy(() => import("./pages/ProjectsCSE"));
 const ProjectsECE = lazy(() => import("./pages/ProjectsECE"));
 const ProjectsBS = lazy(() => import("./pages/ProjectsBS"));
 const LabCSE = lazy(() => import("./pages/LabCSE"));
+const Report = lazy(() => import("./pages/report"));
 
 
 interface LayoutProps {
@@ -141,6 +142,7 @@ const App: React.FC = () => {
           <Route path="/ece/projects" element={<Layout><ProjectsECE /></Layout>} />
           <Route path="/basic-sciences/projects" element={<Layout><ProjectsBS /></Layout>} />
           <Route path="/cse/laboratory" element={<Layout><LabCSE /></Layout>} />
+          <Route path="/programs/reports" element={<Layout><Report /></Layout>} />
         </Routes>
       </Suspense>
     </div>
