@@ -45,7 +45,6 @@ const ManageNotices = lazy(() => import("./pages/ManageNotices"));
 const Research_BS = lazy(() => import("./pages/Research_BS"));
 const Research_CSE = lazy(() => import("./pages/Research_CSE"));
 const Research_ECE = lazy(() => import("./pages/Research_ECE"));
-const Overview_PhD = lazy(() => import("./pages/Overview_PhD"));
 const WhyRecruitIIITN = lazy(() => import("./pages/whyrecruit"));
 const Director = lazy(() => import("./pages/director"));
 const Registrar = lazy(() => import("./pages/registrar"));
@@ -54,14 +53,14 @@ const Staff = lazy(() => import("./pages/staff"));
 const BuildingWorksCommittee = lazy(() => import("./pages/buildingworkscommitee"));
 const Senate = lazy(() => import("./pages/senate"));
 const Finance = lazy(() => import("./pages/finance"));
-const Board = lazy(() => import("./pages/board"));
-const Features_PhD = lazy(() => import("./pages/Features_PhD"));
-const RA_PhD = lazy(() => import("./pages/RA_PhD"));
-const OD_PhD = lazy(() => import("./pages/OD_PhD"));
-const IP_PhD = lazy(() => import("./pages/IP_PhD"));
-const Check_PhD = lazy(() => import("./pages/Check_PhD"));
-const Contact_PhD = lazy(() => import("./pages/Contact_PhD"));
+const Board = lazy(() => import("./pages/board"))
+const Overview_PhD = lazy(() => import("./pages/Overview_PhD"));
 const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics"));
+const ProjectsCSE = lazy(() => import("./pages/ProjectsCSE"));
+const ProjectsECE = lazy(() => import("./pages/ProjectsECE"));
+const ProjectsBS = lazy(() => import("./pages/ProjectsBS"));
+const LabCSE = lazy(() => import("./pages/LabCSE"));
+
 
 interface LayoutProps {
   children: ReactNode;
@@ -132,17 +131,16 @@ const App: React.FC = () => {
           <Route path="/placements/why-recruit" element={<Layout><WhyRecruitIIITN /></Layout>} />
           <Route path="placements/statistics" element={<Layout><PlacementStatistics /></Layout>} /> {/* Added new route */}
           <Route path="/admin/manage-notices" element={<ManageNotices />} />
+
+          <Route path="/basic-sciences/research" element={<Layout><Research_BS /></Layout>} /> {/* Added new route */}
           <Route path="/basic-sciences/research" element={<Layout><Research_BS /></Layout>} />
           <Route path="/ece/research" element={<Layout><Research_ECE /></Layout>} />
           <Route path="/cse/research" element={<Layout><Research_CSE /></Layout>} />
           <Route path="/phd/overview" element={<Layout><Overview_PhD /></Layout>} />
-          <Route path="/phd/features" element={<Layout><Features_PhD /></Layout>} />
-          <Route path="/phd/research-areas" element={<Layout><RA_PhD /></Layout>} />
-          <Route path="/phd/operational-details" element={<Layout><OD_PhD /></Layout>} />
-          <Route path="/phd/proformas" element={<Layout><IP_PhD /></Layout>} />
-          <Route path="/phd/checklists" element={<Layout><Check_PhD /></Layout>} />
-          <Route path="/phd/contact" element={<Layout><Contact_PhD /></Layout>} />
-          {/* Added new route */}
+          <Route path="/cse/projects" element={<Layout><ProjectsCSE /></Layout>} />
+          <Route path="/ece/projects" element={<Layout><ProjectsECE /></Layout>} />
+          <Route path="/basic-sciences/projects" element={<Layout><ProjectsBS /></Layout>} />
+          <Route path="/cse/laboratory" element={<Layout><LabCSE /></Layout>} />
         </Routes>
       </Suspense>
     </div>

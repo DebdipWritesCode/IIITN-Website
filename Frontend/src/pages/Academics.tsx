@@ -53,7 +53,7 @@ const Academics = () => {
               className="w-32 h-full shadow-lg object-cover mr-4"
             />
             <div className="flex flex-col gap-2">
-              <h1 className="text-xl font-semibold text-purple-600">
+              <h1 className="text-xl font-semibold text-orange-600">
                 Postgraduate Academics
               </h1>
               <p className="text-gray-600 text-md text-justify">
@@ -74,7 +74,7 @@ const Academics = () => {
               className="w-32 h-full shadow-lg object-cover mr-4"
             />
             <div className="flex flex-col gap-2">
-              <h1 className="text-xl font-semibold text-red-600">
+              <h1 className="text-xl font-semibold text-orange-600">
                 Doctorate Programs
               </h1>
               <p className="text-gray-600 text-md text-justify">
@@ -124,16 +124,16 @@ const Academics = () => {
           </h1>
         </div>
 
-        <div className="bg-white shadow-lg p-6 rounded-lg text-center border-t-4 border-red-500">
+        <div className="bg-white shadow-lg p-6 rounded-lg text-center border-t-4 border-orange-500">
           <img src={Two} alt="Lecture" className="mx-auto h-20 mb-4" />
-          <h1 className="text-3xl mt-10 font-semibold text-red-600">
+          <h1 className="text-3xl mt-10 font-semibold text-orange-600">
             Organised Lecture Plans
           </h1>
         </div>
 
-        <div className="bg-white shadow-lg p-6 rounded-lg text-center border-t-4 border-blue-500">
+        <div className="bg-white shadow-lg p-6 rounded-lg text-center border-t-4 border-orange-500">
           <img src={Three} alt="Library" className="mx-auto h-20 mb-4" />
-          <h1 className="text-3xl mt-10 font-semibold text-blue-600">
+          <h1 className="text-3xl mt-10 font-semibold text-orange-600">
             Student Library
           </h1>
         </div>
