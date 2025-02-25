@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-// Lazy load page components for better performance
 const Home = lazy(() => import("./pages/Home"));
 const Academics = lazy(() => import("./pages/Academics"));
 const Governance = lazy(() => import("./pages/Governance"));
@@ -43,10 +42,15 @@ const AAbout = lazy(() => import("./pages/AAbout"));
 const Mhai = lazy(() => import("./pages/Mhai"));
 const ForCompanies = lazy(() => import("./pages/for_companies"));
 const ManageNotices = lazy(() => import("./pages/ManageNotices"));
+<<<<<<< HEAD
 const Research_BS = lazy(() => import("./pages/Research_BS"));
 const Research_CSE = lazy(() => import("./pages/Research_CSE"));
 const Research_ECE = lazy(() => import("./pages/Research_ECE"));
 const WhyRecruitIIITN = lazy(() => import("./pages/whyrecruit")); // Added "Why Recruit" page
+=======
+const Bos_Research = lazy(() => import("./pages/Researchbos"));
+const WhyRecruitIIITN = lazy(() => import("./pages/whyrecruit"));
+>>>>>>> c314dfb1aa8d956b7490b44d384274241913d5d9
 const Director = lazy(() => import("./pages/director"));
 const Registrar = lazy(() => import("./pages/registrar"));
 const Chairman = lazy(() => import("./pages/chairman"));
@@ -55,10 +59,13 @@ const BuildingWorksCommittee = lazy(() => import("./pages/buildingworkscommitee"
 const Senate = lazy(() => import("./pages/senate"));
 const Finance = lazy(() => import("./pages/finance"));
 const Board = lazy(() => import("./pages/board"));
+<<<<<<< HEAD
 const Overview_PhD = lazy(() => import("./pages/Overview_PhD"));
 const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics")); // Added "Why Recruit" page
+=======
+const PlacementStatistics = lazy(() => import("./pages/PlacementStatistics"));
+>>>>>>> c314dfb1aa8d956b7490b44d384274241913d5d9
 
-// Layout wrapper for consistent UI
 interface LayoutProps {
   children: ReactNode;
 }
@@ -66,7 +73,7 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => (
   <>
     <Navbar />
-    <div className="pt-20">{children}</div> {/* Ensures content is below the fixed navbar */}
+    <div className="pt-30">{children}</div>
     <Footer />
   </>
 );

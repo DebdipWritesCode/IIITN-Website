@@ -7,7 +7,15 @@ import Undergrad from "../assets/academics/undergrad.jpg"
 import Postgrad from "../assets/academics/postgrad.png"
 import Doctorate from "../assets/academics/doctorate.jpg"
 import Postgrad_Prog from "../assets/academics/postgraduate-program.jpg"
-
+import class1 from "../assets/academics/class1.jpg"
+import class2 from "../assets/academics/class2.jpg"
+import class3 from "../assets/academics/class3.jpg"
+import lab1 from "../assets/academics/lab1.jpg"
+import lab2 from "../assets/academics/lab2.jpg"
+import lab3 from "../assets/academics/lab3.jpg"
+import lib1 from "../assets/academics/lib1.jpg"
+import lib2 from "../assets/academics/lib2.jpg"
+import lib3 from "../assets/academics/lib3.jpeg"
 const Academics = () => {
   return (
     <div className="pt-24 font-montserrat px-20 mb-26">
@@ -195,21 +203,21 @@ const Academics = () => {
         <div className="relative flex flex-wrap justify-center gap-6 md:gap-10 lg:gap-16 z-40">
           <div className="relative w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-2xl shadow-lg overflow-hidden border border-orange-300">
             <img
-              src="/classroom1.jpg"
+              src={class1}
               alt="Classroom 1"
               className="w-full h-full object-cover"
             />
           </div>
           <div className="relative w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-2xl shadow-lg overflow-hidden border border-orange-300">
             <img
-              src="/classroom2.jpg"
+              src={class2}
               alt="Classroom 2"
               className="w-full h-full object-cover"
             />
           </div>
           <div className="relative w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-2xl shadow-lg overflow-hidden border border-orange-300">
             <img
-              src="/classroom3.jpg"
+              src={class3}
               alt="Classroom 3"
               className="w-full h-full object-cover"
             />
@@ -230,21 +238,21 @@ const Academics = () => {
         <div className="relative flex flex-wrap justify-center gap-6 md:gap-10 lg:gap-16 z-40">
           <div className="relative w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-2xl shadow-lg overflow-hidden border border-orange-300">
             <img
-              src="/classroom1.jpg"
+              src={lab1}
               alt="Classroom 1"
               className="w-full h-full object-cover"
             />
           </div>
           <div className="relative w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-2xl shadow-lg overflow-hidden border border-orange-300">
             <img
-              src="/classroom2.jpg"
+              src={lab2}
               alt="Classroom 2"
               className="w-full h-full object-cover"
             />
           </div>
           <div className="relative w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-2xl shadow-lg overflow-hidden border border-orange-300">
             <img
-              src="/classroom3.jpg"
+              src={lab3}
               alt="Classroom 3"
               className="w-full h-full object-cover"
             />
@@ -266,21 +274,21 @@ const Academics = () => {
         <div className="relative flex flex-wrap justify-center gap-6 md:gap-10 lg:gap-16 z-40">
           <div className="relative w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-2xl shadow-lg overflow-hidden border border-orange-300">
             <img
-              src="/classroom1.jpg"
+              src={lib1}
               alt="Classroom 1"
               className="w-full h-full object-cover"
             />
           </div>
           <div className="relative w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-2xl shadow-lg overflow-hidden border border-orange-300">
             <img
-              src="/classroom2.jpg"
+              src={lib2}
               alt="Classroom 2"
               className="w-full h-full object-cover"
             />
           </div>
           <div className="relative w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-2xl shadow-lg overflow-hidden border border-orange-300">
             <img
-              src="/classroom3.jpg"
+              src={lib3}
               alt="Classroom 3"
               className="w-full h-full object-cover"
             />
